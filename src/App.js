@@ -9,8 +9,8 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<Signup />}/>
-        <Route path="/LV" element={<LikedVideos />}/>
-        <Route path="/WL" element={<WatchLater />}/>
+        <Route path="/liked-videos" element={<LikedVideos />}/>
+        <Route path="/watch-later" element={<WatchLater />}/>
         <Route path="/video" element={<VideoListing />}/>
       </Routes>
      
