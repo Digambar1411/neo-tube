@@ -10,18 +10,38 @@ export const categories = [
     _id: uuid(),
     categoryName: "Computer Programming",
     description:
-      "Computer programming is the process of designing and building an executable computer program to accomplish a specific computing",
+      "hitesh choudhary, code with harry","free code camp"
   },
   {
     _id: uuid(),
-    categoryName: "Frontend Development",
+    categoryName: "news",
     description:
-      "Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application",
+      "lallantop, bol bhidu"
   },
   {
     _id: uuid(),
-    categoryName: "Backend Development",
+    categoryName: "health awareness",
     description:
-      "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
+      "fit tuber"
   },
-];
+  {
+    _id: uuid(),
+    categoryName: "social awareness",
+    description:
+      "dhruv rathe"
+  },
+  {
+    _id: uuid(),
+    categoryName: "JavaScript",
+    description:
+      "akshay saini"
+
+  },
+  {
+    _id: uuid(),
+    categoryName: "law's",
+    description:
+      "labor law adviser"
+
+  }
+]
