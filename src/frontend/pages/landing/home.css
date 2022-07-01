@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+*{
+    font-family: 'Rubik', sans-serif;
+}
+
+.landing-page{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height:auto;
+    margin-bottom: 8.55rem;
+}
+
+.main-section{
+    position: relative;
+    top: 79px;
+    left: 256px;
+    width:81%;
+    display: flex ;
+    flex-direction: column;
+}
+
+.main-header{
+    width:81%;
+    display: flex;
+    flex-direction: row;
+    position:fixed;
+    z-index:4;
+    border-top: 1px solid var(--light-border-color);
+    border-bottom: 1px solid var(--light-border-color);
+    background-color: var(--secondary-background-color);
+    gap: 1rem;
+    align-items: center;
+    padding: 10px;
+    padding-left: 1rem;
+}
+
+.category-btn{
+    font-size: 1em;
+    width: max-content;
+    padding: 8px 12px;
+    border-radius:25px;
+    border: 1px solid var(--light-border-color);
+    color:var(--font-color);
+    background-color: var(--background-accent);
+}
+
+.category-btn:hover{
+    background-color: var(--background-accent-two);
+    background-color: #81C784;
+}
+
+.category-btn:focus{
+    background-color: var(--brand-color);
+}
+
+.main-cards-container{
+    top: 58px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 254px);
+    height: fit-content;
+    gap: 1rem;
+    padding: 1.25rem 1rem;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    background-color:var(--primary-background-color);
+}
+
+.video-card{
+    height:245px;
+}
+
+.card-image{
+    height:55%;
+    background-color: var(--brand-color);  
+}
+
+.video-info-container{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    gap:6px;
+    margin-top: 12px;
+    padding-bottom: 8.25px;
+    color:var(--font-color);
+}
+
+.video-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+}
+
+.title{
+    font-size:15px;
+}
+
+.sub-details{
+    font-size: 13px;
+    color: var(--light-font-color);
+}
+
+.owner-name{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.other-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.md-13{
+    font-size: 13px;
+}
+
+.validity{
+    padding-left: 10px;
+}
+
+.material-icons, .material-icons-outlined{
+    color:var(--font-color);
+    cursor: pointer;
+}
