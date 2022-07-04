@@ -1,6 +1,5 @@
 import "./nav.css";
-import { useSidebar } from "../../contexts/index";
-import { useTheme } from "../../contexts/index";
+import { useSidebar, useTheme  } from "../../contexts/index";
 
 export function Navbar() {
  const { showSidebar } = useSidebar();
