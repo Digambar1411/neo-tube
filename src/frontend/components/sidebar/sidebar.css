@@ -1,0 +1,42 @@
+.side-bar.active{
+    left: 0;
+}
+
+.side-bar{
+    width:250px;
+    height:100vh;
+    display:flex;
+    position: fixed;
+    top:60px;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-right:0.5rem;
+    left:-100%;
+    background-color: var(--secondary-background-color);
+}
+
+.side-bar-menu{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.menu-text{
+    margin-left: 1.5rem;
+}
+
+.side-bar-menu:hover{
+    background-color: var(--background-accent);
+}
+
+.side-bar-menu.active-link{
+    background-color: var(--background-accent-two);
+}
+
+.mg-top{
+    margin-top: 1rem;
+}
+

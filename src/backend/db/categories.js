@@ -10,7 +10,7 @@ export const categories = [
     _id: uuid(),
     categoryName: "Computer Programming",
     description:
-      "hitesh choudhary, code with harry","free code camp"
+      "hitesh choudhary, code with harry,free code camp"
   },
   {
     _id: uuid(),
