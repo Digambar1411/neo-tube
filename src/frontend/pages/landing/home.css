@@ -22,7 +22,7 @@
 }
 
 .main-header{
-    width:81%;
+    width:82%;
     display: flex;
     flex-direction: row;
     position:fixed;
@@ -68,62 +68,3 @@
     background-color:var(--primary-background-color);
 }
 
-.video-card{
-    height:245px;
-}
-
-.card-image{
-    height:55%;
-    background-color: var(--brand-color);  
-}
-
-.video-info-container{
-    display: flex;
-    width:100%;
-    flex-direction: row;
-    gap:6px;
-    margin-top: 12px;
-    padding-bottom: 8.25px;
-    color:var(--font-color);
-}
-
-.video-details{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap:10px;
-}
-
-.title{
-    font-size:15px;
-}
-
-.sub-details{
-    font-size: 13px;
-    color: var(--light-font-color);
-}
-
-.owner-name{
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.other-details{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-.md-13{
-    font-size: 13px;
-}
-
-.validity{
-    padding-left: 10px;
-}
-
-.material-icons, .material-icons-outlined{
-    color:var(--font-color);
-    cursor: pointer;
-}
