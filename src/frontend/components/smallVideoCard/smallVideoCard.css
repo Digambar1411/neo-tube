@@ -1,0 +1,89 @@
+.video-card{
+    height:245px;
+}
+
+.card-image{
+    height:135px;
+    background-color: var(--brand-color);  
+}
+
+.video-info-container{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    gap:6px;
+    margin-top: 12px;
+    padding-bottom: 8.25px;
+    color:var(--font-color);
+    overflow: hidden;
+}
+
+.video-details{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap:10px;
+}
+
+.title{
+    font-size:15px;
+    height:36px;
+    width:182px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    
+}
+
+.sub-details{
+    font-size: 13px;
+    color: var(--light-font-color);
+}
+
+.owner-name{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.other-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.md-13{
+    font-size: 13px;
+}
+
+.validity{
+    padding-left: 10px;
+}
+
+.material-icons, .material-icons-outlined{
+    color:var(--font-color);
+    cursor: pointer;
+}
+
+
+.thumbnail-img{
+    width:100%;
+    height:100%;
+   
+}
+
+.separator{
+    font-size: 8px;
+    color:var(--light-font-color);
+    margin-right: 4px;
+}
+
+.owner-profile{
+    margin-right: 4px;
+    width: 2rem;
+    height: 2rem;
+    border-radius:50%;
+}
