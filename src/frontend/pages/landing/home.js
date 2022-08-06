@@ -1,12 +1,11 @@
-import { Footer, Navbar, Sidebar, SmallVideoCard} from "../../components/index";
+import { Footer, Navbar, Sidebar, SmallVideoCard, CategoryContainer} from "../../components/index";
 import "./home.css";
-import { useCategory, useVideos } from "../../contexts";
+import { useVideos } from "../../contexts";
 
 
 export function Home(){
     const { videos } = useVideos();
-    const { categories } = useCategory();
-  
+    
     return(
         <>
             <Navbar />
@@ -15,16 +14,13 @@ export function Home(){
                 <Sidebar />
                         
                 <main className="main-section">
-                    <div className="main-header">
-                        {categories && categories.map(({categoryName})=><button className="category-btn">{categoryName}</button>)}
-                        
-                    </div>
-                    
+
+                    <CategoryContainer />
+                                        
                     <div className="main-cards-container">
-                        { videos && videos.map(video=>
-                        <SmallVideoCard key={video._id} video={video}/>
-                        )}
-                        
+                        { videos && 
+                            videos.map(video=><SmallVideoCard key={video._id} video={video}/>)
+                        }
                     </div>
                 </main>
             </div>

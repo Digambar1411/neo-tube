@@ -1,0 +1,33 @@
+.main-header{
+    width:82%;
+    display: flex;
+    flex-direction: row;
+    position:fixed;
+    z-index:4;
+    border-top: 1px solid var(--light-border-color);
+    border-bottom: 1px solid var(--light-border-color);
+    background-color: var(--secondary-background-color);
+    gap: 1rem;
+    align-items: center;
+    padding: 10px;
+    padding-left: 1rem;
+}
+
+.category-btn{
+    font-size: 1em;
+    width: max-content;
+    padding: 8px 12px;
+    border-radius:25px;
+    border: 1px solid var(--light-border-color);
+    color:var(--font-color);
+    background-color: var(--background-accent);
+}
+
+.category-btn:hover{
+    background-color: var(--background-accent-two);
+    background-color: #81C784;
+}
+
+.category-btn:focus{
+    background-color: var(--brand-color);
+}
