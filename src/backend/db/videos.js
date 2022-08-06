@@ -7,7 +7,7 @@
     views:"83K",
     channel:"Fit Tuber",
     channelProfile:"ytc/AMLnZu-e1AZQMfQgV6NMju1CBiycOZON54u7gs1AdRIo=s68-c-k-c0x00ffffff-no-rj",
-    thumbnail:"img.youtube.com/vi/gcNGaTYwA3I/maxresdefault.jpg",
+    thumbnail:"https://i.ytimg.com/vi/gcNGaTYwA3I/maxresdefault.jpg",
     uploadedAt:new Date("Feb 25, 2022"),
     description:"In this video, I am going to share with you 4 kitchen products that you throw away immediately. Most of these products are used daily in Indian households and to know that these products pose some serious health hazards is really disturbing. It’s high time we talk about them as I can assure you that most of you would be using 3 out of these 4 products on a daily basis. We will discuss why these products are detrimental and how easily you can switch to healthier alternatives. ",   
   },
@@ -47,6 +47,18 @@
     uploadedAt:new Date("Dec 10, 2020"),
     description:" This complete 134-part JavaScript tutorial for beginners will teach you everything you need to know to get started with the JavaScript programming language.",   
   },
+
+  {
+    _id: "lNvBXLbInXE",
+    title: "7 Min Daily Yoga Routine for Beginners (Follow Along)",
+    categoryName:"Health Awareness",
+    views:"421K",
+    channel:"Fit Tuber",
+    channelProfile:"ytc/AMLnZu-e1AZQMfQgV6NMju1CBiycOZON54u7gs1AdRIo=s68-c-k-c0x00ffffff-no-rj",
+    thumbnail:  "https://i.ytimg.com/vi/lNvBXLbInXE/hqdefault.jpg",
+    uploadedAt:new Date("Jun 03, 2022"),
+    description:"This is a 7 Minute daily yoga routine for beginners that you can easily do at home. It is compact yet extremely rejuvenating for the body and the mind. If you have never done any of the yogic breathing exercises or asanas then this can be a perfect start. One more thing, this video is not just to watch but to follow along.",   
+  },
  
   {
     _id: "tz0fDABt67g",
@@ -84,6 +96,20 @@
     description:"Creating a Form for Adding Product | NextJs Tutorial for Beginners #78.",   
   },
 
+  
+
+  {
+    _id: "cO8cccJkQ1c",
+    title: "20 Min Full Body Workout For Beginners (Follow Along) | Men & Women",
+    categoryName:"Health Awareness",
+    views:"1.7M",
+    channel:"Fit Tuber",
+    channelProfile:"ytc/AMLnZu-e1AZQMfQgV6NMju1CBiycOZON54u7gs1AdRIo=s68-c-k-c0x00ffffff-no-rj",
+    thumbnail:  "https://i.ytimg.com/vi/cO8cccJkQ1c/hqdefault.jpg",
+    uploadedAt:new Date("Oct 08, 2021"),
+    description:"20 Minutes Full Body Daily Workout Routine for men and women that you can do at home. Total body workout for fat loss and muscle toning. ",   
+  },
+
   {
     _id: "0cSVuySEB0A",
     title: "React Router v6 in depth guide",
@@ -99,7 +125,7 @@
   {
     _id: "TGHqBX1YJRc",
     title: "The Men who Built India | Untold Story of Tata | Dhruv Rathee",
-    category:"Social Awareness",
+    categoryName:"Social Awareness",
     views:"3M",
     channel:"Dhruv Rathee",
     channelProfile:"oQ2NQMuq-9IS6_MZdsGXa0RWecaACremA01Z7jo-YpoEF1H6PyUF8PZzXkV10OYwSP3UMJDeTg=s68-c-k-c0x00ffffff-no-rj",
@@ -111,7 +137,7 @@
   {
     _id: "Iwz_Vdz8EKw",
     title: "Agneepath Scheme Explained | Good or Bad? | Agniveers | Dhruv Rathee ft.",
-    category:"Social Awareness",
+    categoryName:"Social Awareness",
     views:"5M",
     channel:"Dhruv Rathee",
     channelProfile:"oQ2NQMuq-9IS6_MZdsGXa0RWecaACremA01Z7jo-YpoEF1H6PyUF8PZzXkV10OYwSP3UMJDeTg=s68-c-k-c0x00ffffff-no-rj",
@@ -123,7 +149,7 @@
   {
     _id: "Wy017TbTzuY",
     title: "ITR Filing for salaried employees | Online Tutorial AY 2022-23 | Income Tax Return | LLA",
-    category:"Social Awareness",
+    categoryName:"Social Awareness",
     views:"576K",
     channel:"Labour Law Advisor ",
     channelProfile:"x1JSvmCagWY4M7yDxuf42ZjSUqY5RhomZsN35VIysRDlfwgbiHF3ygLw0DbA4j46BWxClqs3Gg=s68-c-k-c0x00ffffff-no-rj",
@@ -135,7 +161,7 @@
   {
     _id: "l3Acc3D8OH4",
     title: "[Secrets Revealed] How to find the BEST Health Insurance Policy? ft @B Wealthy",
-    category:"Social Awareness",
+    categoryName:"Social Awareness",
     views:"817K",
     channel:"Labour Law Advisor ",
     channelProfile:"x1JSvmCagWY4M7yDxuf42ZjSUqY5RhomZsN35VIysRDlfwgbiHF3ygLw0DbA4j46BWxClqs3Gg=s68-c-k-c0x00ffffff-no-rj",
@@ -149,7 +175,7 @@
    {
     _id: "GKyCVpBh_Zw",
     title: "जगभरात मंदीची लाट येईल अशी शक्यता असताना भारतात ही मंदी 0% असेल अस का म्हटलं जातयं | Bol Bhidu",
-    category:"News",
+    categoryName:"News",
     views:"49K",
     channel:"Bol Bhidu",
     channelProfile:"8d6ERqjLo_XCYH-0DWBd9L4tNKEHgZNSGBlZsxpCPRi6BgdcJmGfwmidRBwS7J5gAmE8JWFx=s68-c-k-c0x00ffffff-no-rj",
@@ -161,7 +187,7 @@
   {
     _id: "7qrHperoAMA",
     title: "आणि नरेंद्र मोदींनी ठरवलं, आता गडकरींना दाखवून द्यायचं आपलं भाजपमध्ये किती वजन आहे.. | BolBhidu #BJP",
-    category:"News",
+    categoryName:"News",
     views:"496K",
     channel:"Bol Bhidu",
     channelProfile:"8d6ERqjLo_XCYH-0DWBd9L4tNKEHgZNSGBlZsxpCPRi6BgdcJmGfwmidRBwS7J5gAmE8JWFx=s68-c-k-c0x00ffffff-no-rj",
@@ -174,7 +200,7 @@
   {
     _id: "WafKlTKUFyw",
     title: "Masterclass: Myanmar में Narendra Modi की मुश्किल का China ने क्या फायदा उठा लिया? Duniyadari E628",
-    category:"News",
+    categoryName:"News",
     channelProfile:"ytc/AMLnZu95miw-xxKObNVp2GD5DlZrteukt1_12cDtOOVqHBQ=s68-c-k-c0x00ffffff-no-rj",
     views:"89K",
     channel:"The Lallantop",
@@ -184,9 +210,21 @@
   },
 
   {
+    _id: "iLWTnMzWtj4",
+    title: "How JavaScript Code is executed? ❤️& Call Stack | Namaste JavaScript Ep. 2",
+    categoryName:"Javascript",
+    views:"440K",
+    channel:"Akshay Saini",
+    channelProfile:"ytc/AMLnZu-cSoO0e2Shro4sYkaKYCumlgllLCTYYNf7bk7G_g=s68-c-k-c0x00ffffff-no-rj",
+    thumbnail:  "https://i.ytimg.com/vi/iLWTnMzWtj4/hqdefault.jpg",
+    uploadedAt:new Date("Oct 20, 2020"),
+    description:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples. ❤️",   
+  },
+
+  {
     _id: "2WJL19wDH68",
     title: "JS Engine EXPOSED 🔥 Google's V8 Architecture 🚀 | Namaste JavaScript Ep. 16",
-    category:"Javascript",
+    categoryName:"Javascript",
     views:"174K",
     channel:"Akshay Saini",
     channelProfile:"ytc/AMLnZu-cSoO0e2Shro4sYkaKYCumlgllLCTYYNf7bk7G_g=s68-c-k-c0x00ffffff-no-rj",
@@ -198,7 +236,7 @@
   {
     _id: "8zKuNo4ay8E",
     title: "Asynchronous JavaScript & EVENT LOOP from scratch 🔥 | Namaste JavaScript Ep.15",
-    category:"Javascript",
+    categoryName:"Javascript",
     views:"393K",
     channel:"Akshay Saini",
     channelProfile:"ytc/AMLnZu-cSoO0e2Shro4sYkaKYCumlgllLCTYYNf7bk7G_g=s68-c-k-c0x00ffffff-no-rj",
@@ -210,7 +248,7 @@
   {
     _id: "nqsPmuicJJc",
     title: "TRUST ISSUES with setTimeout() | Namaste JavaScript Ep.17",
-    category:"Javascript",
+    categoryName:"Javascript",
     views:"117K",
     channel:"Akshay Saini",
     channelProfile:"ytc/AMLnZu-cSoO0e2Shro4sYkaKYCumlgllLCTYYNf7bk7G_g=s68-c-k-c0x00ffffff-no-rj",
@@ -222,7 +260,7 @@
   {
     _id: "zdp0zrpKzIE",
     title: "map, filter & reduce 🙏 Namaste JavaScript Ep. 19 🔥",
-    category:"Javascript",
+    categoryName:"Javascript",
     views:"359K",
     channel:"Akshay Saini",
     channelProfile:"ytc/AMLnZu-cSoO0e2Shro4sYkaKYCumlgllLCTYYNf7bk7G_g=s68-c-k-c0x00ffffff-no-rj",
@@ -230,6 +268,30 @@
     uploadedAt:new Date("Jan 21, 2021"),
     description:"Map, filter & reduce Array functions are the most popular Higher-Order Functions in JavaScript.  This episode covers map(), filter() & reduce() along with 11 detailed code examples from easy to tricky ones(The last example is the Best). You'll also find homework towards the end of this episode. ❤️",   
   },
+
+  {
+    _id: "klnYxLLcceE",
+    title: "India's Worst Plane Crash | Only Mid-Air Collision in History | Dhruv Rathee",
+    categoryName:"Social Awareness",
+    views:"3.7M",
+    channel:"Dhruv Rathee",
+    channelProfile:"oQ2NQMuq-9IS6_MZdsGXa0RWecaACremA01Z7jo-YpoEF1H6PyUF8PZzXkV10OYwSP3UMJDeTg=s68-c-k-c0x00ffffff-no-rj",
+    thumbnail:  "https://i.ytimg.com/vi/klnYxLLcceE/hqdefault.jpg",
+    uploadedAt:new Date("Apr 08, 2022"),
+    description:"India witnessed the worst air crash in its history when 2 planes crashed in the air leading to the death of more than 300 people. This crash took place in a village named Charkhi Dadri near Delhi in 1996, and it became the deadliest case of its kind in the world. But what exactly happened? What was the cause of this crash? What were the findings of the Black Box? Watch this video to find out where I talk about the Charkhi-Dadri Mid Air Plane Collision and everything you need to know about it.",   
+  },
+
+  {
+    _id: "leIiFgI79Ek",
+    title: "How Banks Earn Money? | Business Model of Banks | Dhruv Rathee",
+    categoryName:"Social Awareness",
+    views:"2M",
+    channel:"Dhruv Rathee",
+    channelProfile:"oQ2NQMuq-9IS6_MZdsGXa0RWecaACremA01Z7jo-YpoEF1H6PyUF8PZzXkV10OYwSP3UMJDeTg=s68-c-k-c0x00ffffff-no-rj",
+    thumbnail:  "https://i.ytimg.com/vi/leIiFgI79Ek/hqdefault.jpg",
+    uploadedAt:new Date("Dec 28, 2021"),
+    description:"Banks are often perceived as a money lending entity, but have you ever thought about how do Banks earn money? What is their Business Model? How do they provide you interest over your Deposits? What if all its customers want to withdraw their money at one time? I explain the economics behind how banks earn money and also explain some important concepts such as Cash Reserve Ratio (CRR), Statutory Liquid Ratio (SLR), Bank Run, Non Performing Assets (NPA), etc. in this video.",   
+  }
   
 ];
 
