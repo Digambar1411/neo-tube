@@ -32,7 +32,7 @@ export function Navbar() {
                 <span className="material-icons md-36" onClick={toggleTheme}>
                     dark_mode
                 </span> 
-                : <span class="material-icons-outlined md-30" onClick={toggleTheme}>
+                : <span className="material-icons-outlined md-30" onClick={toggleTheme}>
                 light_mode
                 </span>
                 } 
