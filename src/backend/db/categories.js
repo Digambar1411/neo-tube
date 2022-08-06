@@ -37,7 +37,7 @@ export const categories = [
 
   {
     _id: uuid(),
-    categoryName: "JavaScript",
+    categoryName: "Javascript",
     description:
       "akshay saini"
   }

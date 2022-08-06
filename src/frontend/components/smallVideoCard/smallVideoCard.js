@@ -23,7 +23,7 @@ const SmallVideoCard =({video})=>{
                             <section className="other-details">
                                 <div className="views">{views} views</div>
                                 <div className="validity">
-                                    <span className="material-icons separator">
+                                    <span class="material-icons separator">
                                         fiber_manual_record
                                     </span>
                                     <Moment fromNow>{uploadedAt}</Moment>

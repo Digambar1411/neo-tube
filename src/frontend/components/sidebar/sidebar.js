@@ -18,13 +18,6 @@ export function Sidebar() {
     
             </NavLink>
 
-            <NavLink to="/watch-later" className={sidebarMenuClass}>
-                <span className="material-icons-outlined md-28">
-                    explore
-                </span>
-                <div className="menu-text"> Exlpore</div>
-            </NavLink>
-
             <NavLink to="/liked-videos" className={sidebarMenuClass}>
                 <span className="material-icons-outlined md-28">
                     thumb_up
@@ -46,12 +39,6 @@ export function Sidebar() {
                 <div className="menu-text">History</div>
             </NavLink>
 
-            <NavLink to="/watch-later" className={sidebarMenuClass}>
-                <span className="material-icons-outlined md-28">
-                    settings
-                </span>
-                <div className="menu-text">Settings</div>
-            </NavLink>
         </div>
 
     </>
