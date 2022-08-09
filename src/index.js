@@ -10,18 +10,17 @@ import { SidebarProvider, ThemeProvider, CategoryProvider, VideosProvider} from 
 makeServer();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider>
-      <SidebarProvider>
-        <CategoryProvider>
-          <VideosProvider>
-            <BrowserRouter>
+
+    <BrowserRouter>
+      <ThemeProvider>
+        <SidebarProvider>
+          <CategoryProvider>
+            <VideosProvider>
               <App />
-            </BrowserRouter>
-          </VideosProvider>
-        </CategoryProvider>
-      </SidebarProvider>
-    </ThemeProvider>
-  </React.StrictMode>,
+            </VideosProvider>
+          </CategoryProvider>
+        </SidebarProvider>
+      </ThemeProvider>
+    </BrowserRouter>,
   document.getElementById("root")
 );
