@@ -39,6 +39,12 @@ export function Sidebar() {
                 <div className="menu-text">History</div>
             </NavLink>
 
+            <NavLink to="/play-list" className={sidebarMenuClass}>
+                <span className="material-icons-outlined md-28">
+                    playlist_play
+                </span>
+                <div className="menu-text">Playlist</div>
+            </NavLink>
         </div>
 
     </>

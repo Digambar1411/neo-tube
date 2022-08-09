@@ -1,9 +1,11 @@
 import "./nav.css";
 import { useSidebar, useTheme  } from "../../contexts/index";
+import { useNavigate } from "react-router-dom";
 
 export function Navbar() {
  const { showSidebar } = useSidebar();
  const { toggleTheme, theme } = useTheme();
+ const navigate = useNavigate();
 
     return(
     <>
@@ -14,7 +16,7 @@ export function Navbar() {
                         menu
                     </span>
                 </div>
-                <div className="brand">NeoTube</div>
+                <div className="brand" onClick={()=>navigate("/")}>NeoTube</div>
             </section>
 
             <section className="search-section">
