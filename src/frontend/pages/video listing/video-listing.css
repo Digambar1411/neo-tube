@@ -1,0 +1,133 @@
+.main-body{
+    width: 100%;
+    background-color: var(--primary-background-color);
+    color: var(--font-color);
+}
+
+.single-video-page{
+    padding: 3rem;
+    display: flex;
+    gap: 3rem;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.player{
+    width:68%;
+    height: max-content;
+}
+
+.ReactPlayer{
+    height: 360px;
+    width: 100% !important;
+    margin: 0px;
+}
+
+.video-title{
+    font-size: 1.25rem;
+    margin-top:0.75rem;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.md-20{
+    font-size:1.25rem;
+}
+
+.dynamic-section{
+    gap: 1rem;
+    margin-left: 0.5rem;
+}
+
+.mg-left-4px{
+    margin-left:4px;
+}
+.mg-left-8px{
+    margin-left:8px;
+}
+
+.video-description{
+    margin-left: 0.5rem;
+    word-spacing: 2px;
+    color: var(--light-font-color);
+}
+
+.video-details{
+    gap: 1rem;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.dynamic-menu{
+    cursor: pointer;
+}
+
+.suggested-videos-container{
+    width: 32%;
+    gap: 1.5rem;
+}
+
+.sm-hz-video-card{
+    width:100%;
+    height:8rem;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.sm-card-thumbnail{
+    width: 50%;
+    height: 100%;
+}
+
+.sm-card-video-details{
+    width: 50%;
+    gap: 8px;
+}
+
+.sm-card-title{
+    font-size: 15px;
+    width: 100%;
+    height: 3.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    
+}
+
+.sm-card-views{
+    color: var(--light-font-color);
+    font-size: 12px;
+}
+
+.sm-card-uploadedTime{
+    font-size: 12px;
+}
+
+.gap-8px{
+    gap: 8px;
+}
+
+.light-font{
+    color: var(--light-font-color);
+}
+
+
+   
+
+
+
+
+
+
+
+
