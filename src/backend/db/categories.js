@@ -1,47 +1,45 @@
 import { v4 as uuid } from "uuid";
 
-/**
- * Category Database can be added here.
- * You can add category of your wish with different attributes
- * */
-
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "Computer Programming",
+    categoryName: "All",
     description:
-      "hitesh choudhary, code with harry,free code camp"
+      "All videos"
   },
+  
   {
     _id: uuid(),
-    categoryName: "news",
+    categoryName: "Programming",
     description:
-      "lallantop, bol bhidu"
+      "hitesh choudhary, code with harry, Web devs simplified, fcc"
   },
+ 
   {
     _id: uuid(),
-    categoryName: "health awareness",
+    categoryName: "Health Awareness",
     description:
       "fit tuber"
   },
   {
     _id: uuid(),
-    categoryName: "social awareness",
+    categoryName: "Social Awareness",
     description:
-      "dhruv rathe"
+      "dhruv rathe, LLA"
   },
+
   {
     _id: uuid(),
-    categoryName: "JavaScript",
+    categoryName: "News",
+    description:
+      "lallantop, bol bhidu"
+  },
+
+  {
+    _id: uuid(),
+    categoryName: "Javascript",
     description:
       "akshay saini"
-
-  },
-  {
-    _id: uuid(),
-    categoryName: "law's",
-    description:
-      "labor law adviser"
-
   }
+  
 ]
