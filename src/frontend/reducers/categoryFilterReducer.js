@@ -8,3 +8,4 @@ const categoryFilterReducer =(state, action)=>{
 
 }
 
+export { categoryFilterReducer }
