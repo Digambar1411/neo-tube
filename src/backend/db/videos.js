@@ -210,15 +210,15 @@
   },
 
   {
-    _id: "iLWTnMzWtj4",
-    title: "How JavaScript Code is executed? ❤️& Call Stack | Namaste JavaScript Ep. 2",
+    _id: "qikxEIxsXco",
+    title: "Closures in JS 🔥 | Namaste JavaScript Episode 10",
     categoryName:"Javascript",
-    views:"440K",
+    views:"337K",
     creator:"Akshay Saini",
     channelProfile:"ytc/AMLnZu-cSoO0e2Shro4sYkaKYCumlgllLCTYYNf7bk7G_g=s68-c-k-c0x00ffffff-no-rj",
-    thumbnail:  "https://i.ytimg.com/vi/iLWTnMzWtj4/hqdefault.jpg",
-    uploadedAt:new Date("Oct 20, 2020"),
-    description:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples. ❤️",   
+    thumbnail:  "https://i.ytimg.com/vi/qikxEIxsXco/hqdefault.jpg",
+    uploadedAt:new Date("Dec 01, 2020"),
+    description:"Closures in JavaScript is the most important topic for interviews. Even many senior frontend developers don't understand this concept properly.  This video will clear all your doubts about closures in js and you will never have to find any other tutorial after this to understand function Closure and Garbage collection. 🔥 ",   
   },
 
   {
