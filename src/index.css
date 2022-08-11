@@ -19,18 +19,18 @@ code {
   --background-accent-two:#dce0e7;
   --light-border-color:#e0e0e0;
   --font-color:#030303;
-  --light-font-color:#838383;
+  --light-font-color:#6d6b6b;
   --brand-color:#0cb949;
   
 }
 
 [theme-class="dark"]{
-  --primary-background-color:#080808;
+  --primary-background-color:#131414;
   --secondary-background-color:#0e0d0d;
   --background-accent:#1d1d1d;
   --background-accent-two:#302f2f;
   --light-border-color:#444647;
   --font-color:#ffffff;
-  --light-font-color:#838282;
+  --light-font-color:#b4b3b3;
   --brand-color:#1DB954;
 }

@@ -1,0 +1,38 @@
+.main-header{
+    width:82%;
+    display: flex;
+    flex-direction: row;
+    position:fixed;
+    z-index:4;
+    border-top: 1px solid var(--light-border-color);
+    border-bottom: 1px solid var(--light-border-color);
+    background-color: var(--secondary-background-color);
+    gap:0.75rem;
+    align-items: center;
+    padding: 10px;
+    padding-left: 1rem;
+    height: 2.25rem;
+}
+
+.category-btn{
+    font-size: 1em;
+    width: max-content;
+    padding: 8px 12px;
+    border-radius:25px;
+    border: 1px solid var(--light-border-color);
+    color:var(--font-color);
+    background-color: var(--background-accent);
+    cursor: pointer;
+    
+}
+
+.category-input:checked~.category-btn{
+    background-color: var(--brand-color);
+    border:1px solid var(--brand-color);
+}
+
+.category-input{
+    cursor: pointer;
+    position: absolute;
+    opacity:0
+}
