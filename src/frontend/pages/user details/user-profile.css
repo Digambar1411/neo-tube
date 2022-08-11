@@ -1,0 +1,36 @@
+*{
+    color:var(--font-color)
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-profile-page{
+    background-color:var(--primary-background-color);
+    margin-top: 5rem;
+}
+
+.profile-card{
+    gap:0.5rem;
+    padding: 4.5rem;
+    width: 15rem;
+    height: 9rem;
+    background-color:var(--secondary-background-color);
+    margin: 3rem auto;
+    border: 1px solid var(--brand-color);
+    border-radius: 10px;
+}
+
+.logout{
+    margin-top: 1rem;
+    background-color:var(--brand-color);
+}
+
+.user-card-heading{
+    font-size: 1.5rem;
+    color:var( --brand-color);
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
