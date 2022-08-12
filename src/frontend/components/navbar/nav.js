@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 export function Navbar() {
     const { showSidebar } = useSidebar();
     const { toggleTheme, theme } = useTheme();
-    const { isLoggedIn} = useAuth();
+    const { stateAuth :{isLoggedIn}} = useAuth();
     const navigate = useNavigate();
 
     return(

@@ -4,7 +4,7 @@ import { useAuth } from "../../contexts";
 import "./user-profile.css";
 
 const UserProfle =()=>{
-    const { user, logoutHandler}= useAuth();
+    const { stateAuth:{user}, logoutHandler}= useAuth();
 
     return(
     <>
