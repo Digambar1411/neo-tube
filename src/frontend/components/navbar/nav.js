@@ -1,11 +1,12 @@
 import "./nav.css";
-import { useSidebar, useTheme  } from "../../contexts/index";
-import { useNavigate } from "react-router-dom";
+import { useSidebar, useTheme , useAuth} from "../../contexts/index";
+import { Link, useNavigate } from "react-router-dom";
 
 export function Navbar() {
- const { showSidebar } = useSidebar();
- const { toggleTheme, theme } = useTheme();
- const navigate = useNavigate();
+    const { showSidebar } = useSidebar();
+    const { toggleTheme, theme } = useTheme();
+    const { stateAuth :{isLoggedIn}} = useAuth();
+    const navigate = useNavigate();
 
     return(
     <>
@@ -27,21 +28,30 @@ export function Navbar() {
                     </span>
                 </div>
             </section>
+            
+                <section className="flex-sp-btwn gap-1rem pd-right center">
+                { 
+                    theme=="light" ?    
+                        <span className="material-icons md-36" onClick={toggleTheme}>
+                            dark_mode
+                        </span> :
+                        <span className="material-icons-outlined md-30" onClick={toggleTheme}>
+                            light_mode
+                        </span> 
+                }
 
-            <section className="flex-sp-btwn gap-1rem pd-right center">
-                { theme=="light" ? 
-                
-                <span className="material-icons md-36" onClick={toggleTheme}>
-                    dark_mode
-                </span> 
-                : <span className="material-icons-outlined md-30" onClick={toggleTheme}>
-                light_mode
-                </span>
-                } 
-                <span className="material-icons-outlined md-36 profile">
-                    person
-                </span>
-            </section>
+                   { isLoggedIn ? 
+                    <span className="material-icons-outlined md-36 profile" onClick={()=>navigate("/user-profile")}>
+                        person
+                    </span> :  
+                    <>
+                        <Link to="/login" className="control-btn">Login</Link>
+                        <button className="control-btn" onClick={()=>navigate("/signup")}>sign up</button>
+                    </>
+                  
+                    }
+                </section>  
+             
         </nav>
     </>
     )

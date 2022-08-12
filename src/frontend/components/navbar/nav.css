@@ -115,3 +115,14 @@ input[type=search]:focus{
 .md-30{
     font-size: 30px;
 }
+
+.control-btn{
+    font-size: 1rem;
+    background: none;
+    border:1px solid var(--brand-color);
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--font-color);
+    padding: 4px 6px;
+    text-decoration: none;
+}
