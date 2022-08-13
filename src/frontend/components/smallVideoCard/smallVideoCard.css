@@ -91,10 +91,10 @@
 }
 
 .modal{
-    min-width: 180px;
+    min-width: 13rem;
     width: fit-content;
     height: auto;
-    padding: 1rem;
+    padding: 0.5rem;
     position: absolute;
     background-color:var(--background-accent-two);
     border-radius: 5px;
