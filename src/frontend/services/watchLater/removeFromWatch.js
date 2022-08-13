@@ -3,7 +3,9 @@ import axios from "axios";
 export const removeFromWatch=(id, token)=>{
     try{
         const response =axios.delete(`/api/user/watchlater/${id}`,{
-            token
+            headers:{
+                authorization:token
+            }
         })
         return response;
 
