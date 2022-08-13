@@ -21,22 +21,6 @@
     
 }
 
-.player{
-    width:68%;
-    height: max-content;
-}
-
-.ReactPlayer{
-    height: 360px;
-    width: 100% !important;
-    margin: 0px;
-}
-
-.video-title{
-    font-size: 1.25rem;
-    margin-top:0.75rem;
-}
-
 .flex-row{
     display: flex;
     flex-direction: row;
@@ -46,35 +30,17 @@
     font-size:1.25rem;
 }
 
-.dynamic-section{
-    gap: 1rem;
-    margin-left: 0.5rem;
-}
-
 .mg-left-4px{
     margin-left:4px;
 }
+
 .mg-left-8px{
     margin-left:8px;
-}
-
-.video-description{
-    margin-left: 0.5rem;
-    word-spacing: 2px;
-    color: var(--light-font-color);
-}
-
-.video-details{
-    gap: 1rem;
 }
 
 .flex-col{
     display: flex;
     flex-direction: column;
-}
-
-.dynamic-menu{
-    cursor: pointer;
 }
 
 .suggested-videos-container{
