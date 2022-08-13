@@ -1,16 +1,24 @@
 .main-body{
     width: 100%;
-    background-color: var(--primary-background-color);
+    
     color: var(--font-color);
+    display: flex;
+    flex-direction: row;
+    height:auto;
+
 }
 
 .single-video-page{
-    padding: 3rem;
-    display: flex;
+    background-color: var(--primary-background-color);
+    padding: 2rem;
+    width:81%;
     gap: 3rem;
-    width: 85%;
-    margin: 0 auto;
-    margin-top: 3rem;
+    display: flex;
+    position: relative;
+    top: 79px;
+    left: 258px;
+    box-sizing: border-box;
+    
 }
 
 .player{
