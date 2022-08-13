@@ -32,7 +32,7 @@ export function Sidebar() {
                <div className="menu-text">Watch Later</div>
             </NavLink>
 
-            <NavLink to="/watch-later" className={sidebarMenuClass}>
+            <NavLink to="/historty" className={sidebarMenuClass}>
                 <span className="material-icons-outlined md-28">
                     history
                 </span>
