@@ -4,5 +4,8 @@ import { Sidebar} from "./sidebar/sidebar";
 import { SmallVideoCard } from "./smallVideoCard/smallVideoCard";
 import { CategoryBar } from "./categoryBar/categoryBar";
 import { SmallHorizontalVideoCard } from "./smallHorizontalVideoCard/smallHorizontalVideoCard"
+import { BigHorizontalCard} from "./bigHorizontalVideoCard/bigHorizontalVideoCard"
+import { PlayCard} from "./playCard/playCard"
+import { PrivateRoutes } from "./privateRoutes";
 
-export { Navbar, Sidebar, Footer, SmallVideoCard, CategoryBar, SmallHorizontalVideoCard};
+export { PrivateRoutes, Navbar, Sidebar, Footer, SmallVideoCard, CategoryBar, SmallHorizontalVideoCard, BigHorizontalCard, PlayCard};

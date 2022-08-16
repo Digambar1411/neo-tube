@@ -1,5 +1,6 @@
 .video-card{
     height:245px;
+    position: relative;
 }
 
 .video-card:hover{
@@ -90,19 +91,26 @@
 }
 
 .modal{
-    width: 180px;
-    height: 60px;
-    padding: 1rem;
+    min-width: 13rem;
+    width: fit-content;
+    height: auto;
+    padding: 0.5rem;
     position: absolute;
     background-color:var(--background-accent-two);
     border-radius: 5px;
-    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 20%);;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 20%);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    right:10px;
+    bottom:-30px;
+    z-index: 5;
 }
 
 .menu-item{
     display:flex;
     flex-direction: row;
-    gap:5px;
+    gap:8px;
     align-items: center;
     justify-content: flex-start;
     color: var(--font-color);
