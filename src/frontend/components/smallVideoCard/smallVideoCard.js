@@ -4,6 +4,7 @@ import { useNavigate} from "react-router-dom"
 import { removeFromWatch, addToWatch} from "../../services/"
 import {useWatchLaterVideos,useAuth} from "../../contexts"
 import "./smallVideoCard.css";
+import { PlaylistModal } from '../playlistModal/playlistModal';
 
 const SmallVideoCard =({video})=>{
     const { _id, title, views, creator, channelProfile, uploadedAt} = video;
@@ -12,11 +13,15 @@ const SmallVideoCard =({video})=>{
     const navigate = useNavigate();
 
     const [showModal, setShowModal] = useState(false);
-
     const isInWatchLater = watchLaterVideos.find(watchLaterVideo=>watchLaterVideo._id===video._id ? true : false)
+    const [playlistModal, setPlaylistModal]= useState(false);
 
     const toggleModal=()=>{
         setShowModal((showModal)=>!showModal)
+    }
+
+    const togglePlaylistModal=()=>{
+        setPlaylistModal(playlistModal=>!playlistModal)
     }
 
     const addToWatchLaterVideos = async()=>{
@@ -85,34 +90,41 @@ const SmallVideoCard =({video})=>{
 
                     { showModal && 
                         <div className="modal">
-                             {isInWatchLater ?
-                                <div className="menu-item" onClick={removeFromWatchLaterVideos}>
+
+                            {isLoggedIn && isInWatchLater ? 
+                                <div className="menu-item" onClick={()=>
+                                    removeFromWatchLaterVideos }>
                                     <span className="material-icons md-28">
                                         watch_later
                                     </span>
                                     <div>Remove from Watch Later</div>
                                 </div>
-                                :
+                                : 
                                 <div className="menu-item" onClick={addToWatchLaterVideos}>
                                     <span className="material-icons-outlined md-28">
                                         watch_later
                                     </span>
                                     <div>Save to Watch Later</div>
                                 </div>
-                            }
-
-                            <div className="menu-item">
+                                
+                            } 
+                                                        
+                            <div className="menu-item" onClick={()=> isLoggedIn ? togglePlaylistModal() : navigate("/login")}>
                                 <span className="material-icons-outlined md-28">
                                     playlist_play
                                 </span>
                                 <div>Add to playlist</div>
                             </div>
-                        </div>  
+                        </div>
+
+                        
                     }
 
                     <span className="material-icons-outlined" onClick={toggleModal}>
                         more_vert
                     </span>
+
+                    { playlistModal && <PlaylistModal video={video}/>}
 
                 </section>
             </div>
