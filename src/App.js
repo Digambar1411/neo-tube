@@ -1,6 +1,6 @@
 // import "./App.css";
 import {Routes, Route} from "react-router-dom";
-import {Home, LikedVideos, WatchLater, Login, Signup, VideoListing, History, Playlist, UserProfle} from "../src/frontend/pages/index";
+import {Home, LikedVideos, WatchLater, Login, Signup, VideoListing, History, Playlist, UserProfle, PlaylistDetails} from "../src/frontend/pages/index";
 import { PrivateRoutes} from "./frontend/components"
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<Signup />}/>
         <Route path="/video-listing/:id" element={<VideoListing />}/>
+        <Route path="/play-list/:playlistId"  element={<PlaylistDetails />}/>
         <Route path="/liked-videos" 
           element={
             <PrivateRoutes >
