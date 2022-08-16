@@ -18,6 +18,7 @@ function App() {
             </PrivateRoutes>
           }
         />
+
         <Route path="/watch-later" 
           element={
             <PrivateRoutes >
@@ -25,6 +26,7 @@ function App() {
             </PrivateRoutes>
           }
         />
+
         <Route path="/history" 
           element={
             <PrivateRoutes >
@@ -32,15 +34,23 @@ function App() {
             </PrivateRoutes>
           }
         />
+
         <Route path="/play-list" 
           element={
             <PrivateRoutes >
-              <Playlist />
+                <Playlist />
             </PrivateRoutes>
           }
         />
         
-        <Route path="/user-profile" element={<UserProfle />} />
+        <Route path="/user-profile" 
+          element={
+            <PrivateRoutes >
+                <UserProfle />
+            </PrivateRoutes>
+          } 
+        />
+
       </Routes>
     </div>
   );
