@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
-import { SidebarProvider, ThemeProvider, CategoryProvider, VideosProvider, AuthProvider, LikedVideosProvider, WatchLaterVideosProvider} from "./frontend/contexts/index.js";
+import { SidebarProvider, ThemeProvider, CategoryProvider, VideosProvider, AuthProvider, LikedVideosProvider, WatchLaterVideosProvider, HistoryProvider,usePlaylist, PlaylistProvider} from "./frontend/contexts";
 
 
 // Call make Server
@@ -20,7 +20,11 @@ ReactDOM.render(
               <VideosProvider>
                 <LikedVideosProvider>
                   <WatchLaterVideosProvider>
-                    <App />
+                    <HistoryProvider>
+                      <PlaylistProvider>
+                        <App />
+                      </PlaylistProvider>                     
+                    </HistoryProvider>
                   </WatchLaterVideosProvider> 
                 </LikedVideosProvider>
               </VideosProvider>
