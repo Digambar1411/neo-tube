@@ -47,7 +47,7 @@ export const PlaylistModal =({video})=>{
             }
         } 
         getAllPlayLists();
-    },[addVideoToPlaylist])
+    },[])
 
     return(
         <div className='playlist-modal'>

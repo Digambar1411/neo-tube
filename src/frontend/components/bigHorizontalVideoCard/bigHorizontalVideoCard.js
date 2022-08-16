@@ -37,7 +37,6 @@ const BigHorizontalCard =({video})=>{
         if(isLoggedIn){
             try{
                 const response = await addToWatch(video,token)
-                console.log(response)
                 if(response.status===201){
                     setWatchLaterVideos(response.data.watchlater)
                 }
@@ -53,7 +52,6 @@ const BigHorizontalCard =({video})=>{
     }
 
     const addToLikedVideos = async()=>{
-
         try{
             const response = await addToLikeService(video, token)
             if(response.status===201){
@@ -98,11 +96,9 @@ const BigHorizontalCard =({video})=>{
         if(isLoggedIn){
             try{
                 const response = await removeFromHistory(video._id,token)
-                console.log(response)
                 if(response!==undefined){
                     historyDispatch({type:"UPDATE_HISTORY", payload:response.data.history})
                 }
-
             }catch(error){
                 console.log(error)
             }
@@ -119,7 +115,6 @@ const BigHorizontalCard =({video})=>{
                 if(playlistResponse!==undefined){
                     playlistDispatch({type:"UPDATE_PLAYLIST", payload:playlistResponse.data.playlists})
                 }
-
         }catch(error){
         }
     }
