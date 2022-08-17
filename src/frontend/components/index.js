@@ -7,5 +7,7 @@ import { SmallHorizontalVideoCard } from "./smallHorizontalVideoCard/smallHorizo
 import { BigHorizontalCard} from "./bigHorizontalVideoCard/bigHorizontalVideoCard"
 import { PlayCard} from "./playCard/playCard"
 import { PrivateRoutes } from "./privateRoutes";
+import { PlayListCard } from "./playListCard/playListCard";
+import { PlaylistModal } from "./playlistModal/playlistModal";
 
-export { PrivateRoutes, Navbar, Sidebar, Footer, SmallVideoCard, CategoryBar, SmallHorizontalVideoCard, BigHorizontalCard, PlayCard};
+export { PrivateRoutes, Navbar, Sidebar, Footer, SmallVideoCard, CategoryBar, SmallHorizontalVideoCard, BigHorizontalCard, PlayCard, PlayListCard ,PlaylistModal};

@@ -1,17 +1,27 @@
 import ReactPlayer from 'react-player/youtube'
 import { addToLikeService , removeFromLikeService, addToWatch, removeFromWatch} from "../../services/"
-import { useLikedVideos, useAuth ,useWatchLaterVideos} from "../../contexts";
+import {addToHistory} from '../../services/historyService';
+import { useLikedVideos, useAuth ,useWatchLaterVideos, useHistory} from "../../contexts";
 import "./playCard.css";
+import { useState } from 'react';
+import { PlaylistModal} from "../../components"
 
 
 const PlayCard=({video})=>{
 
-    const { stateAuth:{token}}=useAuth();
+    const { stateAuth:{token, isLoggedIn}}=useAuth();
     const { likedVideos, setLikedVideos} = useLikedVideos();
     const { watchLaterVideos,setWatchLaterVideos }= useWatchLaterVideos();
+    const { historyDispatch} = useHistory();
 
     const isInWatchLater = watchLaterVideos.find(watchLaterVideo=>watchLaterVideo._id===video._id ? true : false)
     const isInLikedVideos = likedVideos.find(likedVideo=>likedVideo._id===video._id ? true : false)
+
+    const [playlistModal, setPalylistModal]= useState(false);
+
+    const togglePlaylistModal =()=>{
+        setPalylistModal(()=>!playlistModal)
+    }
 
     const addToLikedVideos = async()=>{
         try{
@@ -63,6 +73,18 @@ const PlayCard=({video})=>{
 
     }
 
+    const addVideoToHistory =async()=>{
+        try{
+            const response = await addToHistory(video,token)
+            console.log(response)
+            if(response!==undefined && response.status===201){
+                historyDispatch({type:"UPDATE_HISTORY", payload:response.data.history})
+            }
+            
+        }catch(error){
+            console.log(error)
+        }
+    }
     return(
         <>
             <div className="play-card">
@@ -70,6 +92,7 @@ const PlayCard=({video})=>{
                     className="ReactPlayer"
                     url={`https://www.youtube.com/watch?v=${video._id}`}
                     controls={true}
+                    onStart={ ()=> isLoggedIn && addVideoToHistory()}
                 />
                 <div className='video-details flex-col'>
                     <section className='video-title'>{video.title}</section>
@@ -101,16 +124,19 @@ const PlayCard=({video})=>{
                                 <span className='mg-left-4px'>Watch later</span>
                         </div>
 
-                        <div className='center dynamic-menu'>
+                        <div className='center dynamic-menu' onClick={togglePlaylistModal}>
                             <span className="material-icons-outlined md-20">
                                 playlist_play
                             </span>
                             <span className='mg-left-4px'>Add to Playlist</span>
-                        </div>                 
+                        </div>
+                                  
                     </section>
+                    {playlistModal && <PlaylistModal video={video}/> } 
                     <section className='video-description'><strong>Description :</strong>
                         {video.description}
                     </section>
+                   
                 </div>
             </div>
         </>

@@ -7,9 +7,10 @@ import { VideoListing } from "./video listing/video";
 import { WatchLater } from "./watch later/watchLater";
 import { Playlist } from "./playlist/playlist";
 import { UserProfle } from "./user details/user-profile";
+import { PlaylistDetails } from "./playlistDetails/playlistDetails"
 
 
-export { Home, LikedVideos, WatchLater, Login, Signup, VideoListing, History, Playlist,UserProfle}
+export { Home, LikedVideos, WatchLater, Login, Signup, VideoListing, History, Playlist,UserProfle,PlaylistDetails}
 
 
 

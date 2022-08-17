@@ -5,6 +5,8 @@ import { useCategory, CategoryProvider} from "./category-context";
 import { AuthProvider, useAuth} from "./auth-context";
 import { useLikedVideos, LikedVideosProvider} from "./likes-context"
 import{ useWatchLaterVideos, WatchLaterVideosProvider} from "./watchLater-context"
+import { useHistory , HistoryProvider} from "./history-context"
+import { usePlaylist, PlaylistProvider } from "./playlist-context"
 
 export{ 
     SidebarProvider,  useSidebar,
@@ -13,5 +15,7 @@ export{
     useVideos, useCategory, 
     CategoryProvider, VideosProvider, 
     AuthProvider, useAuth, 
-    useLikedVideos, LikedVideosProvider
+    useLikedVideos, LikedVideosProvider,
+    useHistory , HistoryProvider,
+    usePlaylist, PlaylistProvider
 }

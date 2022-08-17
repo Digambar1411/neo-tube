@@ -1,5 +1,45 @@
+import {Navbar , Sidebar, PlayListCard} from "../../components/index";
+import { useEffect } from "react";
+import { useAuth,usePlaylist} from "../../contexts"
+import {getPlaylists, createPlaylist} from "../../services/playList service"
+import "./playlist.css"
+
 export function Playlist(){
+    const { stateAuth:{isLoggedIn, token}}= useAuth();
+    const {playlistState:{playlists}, playlistDispatch} = usePlaylist();
+
+    useEffect(()=>{
+        const getAllPlayLists = async ()=>{
+            try{
+                const response = await getPlaylists(token)
+                console.log(response)
+                if(response!==undefined && response.status===200){
+                    playlistDispatch({type:"UPDATE_PLAYLIST", payload: response.data.playlists})
+                }
+            }catch(error){
+                console.log(error);
+            }
+        } 
+        getAllPlayLists();
+    },[])
+   
+
     return(
-        <h1>This is Playlist page</h1>
+        <>
+            <div className="main-container">
+                <Navbar />
+                <div className="likes-page">
+                    <div className="sidebar-container"><Sidebar /></div>
+                    <div className="cards-container flex-row-wrap">
+                        { playlists && playlists.map(playlist=>{
+                            return(
+                                <PlayListCard playlist={playlist} key={playlist._id}/>
+                            )
+                        })}
+                    </div>
+                </div>              
+            </div>
+        </>
     )
 }
+

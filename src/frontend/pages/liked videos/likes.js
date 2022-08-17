@@ -7,7 +7,7 @@ export function LikedVideos(){
     
     return(
         <>
-            <div className="container">
+            <div className="main-container">
                 <Navbar />
                 <div className="likes-page">
                     <Sidebar />

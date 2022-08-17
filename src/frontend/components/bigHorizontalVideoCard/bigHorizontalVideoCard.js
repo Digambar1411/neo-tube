@@ -1,20 +1,32 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from 'react';
+import { useNavigate, useLocation, useParams} from "react-router-dom";
+import { useEffect, useState } from 'react';
 import "./bigHorizontalVideoCard.css";
 import { addToLikeService , removeFromLikeService, addToWatch, removeFromWatch} from "../../services/"
-import { useLikedVideos , useAuth, useWatchLaterVideos} from "../../contexts"
+import { removeFromHistory} from "../../services/historyService"
+import { deleteFromPlaylist, getPlaylists} from "../../services/playList service";
+import { useLikedVideos , useAuth, useWatchLaterVideos , usePlaylist, useHistory} from "../../contexts"
+import { PlaylistModal } from "../playlistModal/playlistModal";
 
 const BigHorizontalCard =({video})=>{
 
     const navigate= useNavigate();
+    const location = useLocation();
+    const { playlistId} = useParams()
     const { stateAuth:{token, isLoggedIn}}= useAuth();
     const { likedVideos, setLikedVideos} = useLikedVideos();
     const { watchLaterVideos,setWatchLaterVideos }= useWatchLaterVideos();
+    const { playlistDispatch, playlistState:{playlists}} = usePlaylist();
+    const { historyDispatch, historyState:{history}} = useHistory();
 
      const [showModal, setShowModal] = useState(false);
+     const [showPlaylistModal, setShowPlaylistModal] = useState(false)
 
     const toggleModal=()=>{
         setShowModal((showModal)=>!showModal)
+    }
+
+    const togglePlaylistModal=()=>{
+        setShowPlaylistModal(()=>!showPlaylistModal)
     }
 
     const isInWatchLater = watchLaterVideos.find(watchLaterVideo=>watchLaterVideo._id===video._id ? true : false)
@@ -25,7 +37,6 @@ const BigHorizontalCard =({video})=>{
         if(isLoggedIn){
             try{
                 const response = await addToWatch(video,token)
-                console.log(response)
                 if(response.status===201){
                     setWatchLaterVideos(response.data.watchlater)
                 }
@@ -41,7 +52,6 @@ const BigHorizontalCard =({video})=>{
     }
 
     const addToLikedVideos = async()=>{
-
         try{
             const response = await addToLikeService(video, token)
             if(response.status===201){
@@ -81,7 +91,34 @@ const BigHorizontalCard =({video})=>{
         }
         
     }
-    
+
+    const removeVideoFromHistory =async()=>{
+        if(isLoggedIn){
+            try{
+                const response = await removeFromHistory(video._id,token)
+                if(response!==undefined){
+                    historyDispatch({type:"UPDATE_HISTORY", payload:response.data.history})
+                }
+            }catch(error){
+                console.log(error)
+            }
+        }
+        
+    }
+
+    const deleteVideoFromPlaylist = async()=>{
+        try{
+            const response = await deleteFromPlaylist(playlistId, video._id, token)
+            console.log(response)
+            const playlistResponse = await getPlaylists(token)
+            console.log(playlistResponse)
+                if(playlistResponse!==undefined){
+                    playlistDispatch({type:"UPDATE_PLAYLIST", payload:playlistResponse.data.playlists})
+                }
+        }catch(error){
+        }
+    }
+  
     return(
         <div className='big-hz-video-card flex-row' >
                 <img className='big-card-thumbnail' src={`https://img.youtube.com/vi/${video._id}/maxresdefault.jpg`}
@@ -95,53 +132,124 @@ const BigHorizontalCard =({video})=>{
                     more_vert
                 </span>
 
-        
-        { showModal && 
-            <div className="modal">
-                <div className="menu-item">
-                    <span className="material-icons-outlined md-28">
-                        playlist_play
-                    </span>
-                    <div>Add to playlist</div>
-                </div>
+                { showModal && 
+                    location.pathname==="/liked-videos" && 
+                        <div className="modal" onMouseLeave={()=>setShowModal(false)}>
+                            <div className="menu-item" onClick={removeFromLikedVideos}>
+                                <span className="material-icons md-28">
+                                    delete
+                                </span>
+                                <div>Remove from Liked videos</div>
+                            </div>
 
-                {isInLikedVideos ?
-                    <div className="menu-item" onClick={removeFromLikedVideos}>
-                        <span className="material-icons-outlined md-28">
-                            delete
-                        </span>
-                        <div>Remove from Liked videos</div>
-                    </div> : 
-
-                    <div className="menu-item" onClick={addToLikedVideos}>
-                        <span className="material-icons-outlined md-28">
-                            thumb_up
-                        </span>
-                        <div>Add to Liked videos</div>
-                    </div>
-
+                            <div className="menu-item" onClick={togglePlaylistModal}>
+                                <span className="material-icons-outlined md-28">
+                                    playlist_add
+                                </span>
+                                <div>Add to Playlist</div>
+                            </div>
+                        </div>
                 }
 
-                {isInWatchLater ?
-                    <div className="menu-item" onClick={removeFromWatchLaterVideos}>
-                        <span className="material-icons md-28">
-                            watch_later
-                        </span>
-                        <div>Remove from Watch Later</div>
-                    </div>
-                    :
-                    <div className="menu-item" onClick={addToWatchLaterVideos}>
-                        <span className="material-icons-outlined md-28">
-                            watch_later
-                        </span>
-                        <div>Save to Watch Later</div>
-                    </div>
+                { showModal && 
+                    location.pathname==="/watch-later" && 
+                        <div className="modal">
+                            <div className="menu-item" onClick={removeFromWatchLaterVideos}>
+                                <span className="material-icons md-28">
+                                    watch_later
+                                </span>
+                                <div>Remove from Watch Later</div>
+                            </div>
+                            <div className="menu-item" onClick={togglePlaylistModal}>
+                                <span className="material-icons-outlined md-28">
+                                    playlist_add
+                                </span>
+                                <div>Add to Playlist</div>
+                            </div>
+                        </div>
                 }
-                
-            </div>  
-        }
 
-        </div>
+                { showModal && 
+                    location.pathname==="/history" && 
+                        <div className="modal">
+                            <div className="menu-item" onClick={removeVideoFromHistory}>
+                                <span className="material-icons md-28">
+                                    history
+                                </span>
+                                <div>Remove from History</div>
+                            </div>
+
+                            { isInLikedVideos ? 
+                                <div className="menu-item" onClick={removeFromLikedVideos}>
+                                    <span className="material-icons md-28">
+                                        thumb_up
+                                    </span>
+                                    <div>Remove from Liked Videos</div>
+                                </div> 
+                                : 
+                                <div className="menu-item" onClick={addToLikedVideos}>
+                                    <span className="material-icons-outlined md-28">
+                                        thumb_up
+                                    </span>
+                                    <div>Add to Liked Videos</div>
+                                </div>
+                            }
+
+                            <div className="menu-item" onClick={togglePlaylistModal}>
+                                <span className="material-icons-outlined md-28">
+                                    playlist_add
+                                </span>
+                                <div>Add to Playlist</div>
+                            </div>
+                        </div>
+                }
+
+                { showModal && 
+                    location.pathname===`/play-list/${playlistId}` && 
+                        <div className="modal">
+                            <div className="menu-item" onClick={deleteVideoFromPlaylist}>
+                                <span className="material-icons md-28">
+                                    playlist_play
+                                </span>
+                                <div>Remove from Playlist</div>
+                            </div>
+
+                            {isInWatchLater ? 
+                                <div className="menu-item" onClick={removeFromWatchLaterVideos}>
+                                    <span className="material-icons md-28">
+                                        watch_later
+                                    </span>
+                                    <div>Remove from Watch Later</div>
+                                </div>: 
+                                
+                                <div className="menu-item" onClick={addToWatchLaterVideos}>
+                                    <span className="material-icons-outlined md-28">
+                                        watch_later
+                                    </span>
+                                    <div>Add to Watch Later</div>
+                                </div>
+                            }
+
+                            { isInLikedVideos ? 
+                                <div className="menu-item" onClick={removeFromLikedVideos}>
+                                    <span className="material-icons md-28">
+                                        thumb_up
+                                    </span>
+                                    <div>Remove from Liked Videos</div>
+                                </div> 
+                                : 
+                                <div className="menu-item" onClick={addToLikedVideos}>
+                                    <span className="material-icons-outlined md-28">
+                                        thumb_up
+                                    </span>
+                                    <div>Add to Liked Videos</div>
+                                </div>
+                            }
+                                                        
+                        </div>
+                }
+                {showPlaylistModal && <PlaylistModal />}
+        </div>  
     )
 }
 
