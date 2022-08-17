@@ -5,10 +5,10 @@ import { useAuth , usePlaylist} from "../../contexts"
 
 export const PlaylistModal =({video})=>{
 
-    const { stateAuth:{token, isLoggedIn}}= useAuth();
+    const { stateAuth:{token}}= useAuth();
     const {playlistDispatch, playlistState:{playlists}} = usePlaylist();
-
     const [playlistName, setPlaylistName] = useState("");
+    const [playlistModal, setPlaylistModal]= useState(true);
 
     const createNewPlaylist = async()=>{
         try{
@@ -50,22 +50,33 @@ export const PlaylistModal =({video})=>{
     },[])
 
     return(
-        <div className='playlist-modal'>
-            <div className="create-playlist">
-                <input className="playlist-input" type="text" value={playlistName} onChange={(e)=>setPlaylistName(e.target.value)} />
-                <button className="solid-btn" onClick={()=>playlistName.length>=1 && createNewPlaylist()}>create</button>
+        <>
+            { playlistModal && 
+            <div className='playlist-modal'>
+                <div className="save-to-playlist">
+                    <p>Save to..</p>
+                    <span className="material-icons-outlined md-28" onClick={()=>setPlaylistModal(false)}>
+                            close
+                    </span>          
+                </div>
+                <div className="list-container flex-col">
+                    { playlists && playlists.map(playlist=>{
+                        return(
+                            <label className="checkbox-input-label flex-left" htmlFor="playlist" key={playlist._id}>
+                                <input className="input-checkbox" type="checkbox" id="playlist" onClick={()=>addVideoToPlaylist(playlist._id,video,token)}/>
+                                {playlist.title}
+                            </label>
+                            
+                        )
+                    })
+                    }            
+                </div>
+                <div className="create-playlist">
+                    <input className="playlist-input" type="text" value={playlistName} onChange={(e)=>setPlaylistName(e.target.value)} />
+                    <button className="solid-btn" onClick={()=>playlistName.length>=1 && createNewPlaylist()}>create</button>
+                </div>
             </div>
-            <div className="list-container flex-col">
-                { playlists && playlists.map(playlist=>{
-                    return(
-                        <label className="checkbox-input-label flex-left" htmlFor="playlist" key={playlist._id}>
-                            <input className="input-checkbox" type="checkbox" id="playlist" onClick={()=>addVideoToPlaylist(playlist._id,video,token)}/>
-                            {playlist.title}
-                        </label>
-                    )
-                })
-                }            
-            </div>
-        </div>
+            }
+        </>
     )
 }

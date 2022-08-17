@@ -89,19 +89,18 @@ const SmallVideoCard =({video})=>{
                     </div>
 
                     { showModal && 
-                        <div className="modal">
+                        <div className="modal" onMouseLeave={()=>setShowModal(false)}>
 
                             {isLoggedIn && isInWatchLater ? 
-                                <div className="menu-item" onClick={()=>
-                                    removeFromWatchLaterVideos }>
-                                    <span className="material-icons md-28">
+                                <div className="menu-item" onClick={removeFromWatchLaterVideos}>
+                                    <span className="material-icons md-24">
                                         watch_later
                                     </span>
                                     <div>Remove from Watch Later</div>
                                 </div>
                                 : 
                                 <div className="menu-item" onClick={addToWatchLaterVideos}>
-                                    <span className="material-icons-outlined md-28">
+                                    <span className="material-icons-outlined md-24">
                                         watch_later
                                     </span>
                                     <div>Save to Watch Later</div>
@@ -109,7 +108,7 @@ const SmallVideoCard =({video})=>{
                                 
                             } 
                                                         
-                            <div className="menu-item" onClick={()=> isLoggedIn ? togglePlaylistModal() : navigate("/login")}>
+                            <div className="menu-item" onMouseLeave={()=>setShowPlaylistModal(false)} onClick={()=> isLoggedIn ? togglePlaylistModal() : navigate("/login")}>
                                 <span className="material-icons-outlined md-28">
                                     playlist_play
                                 </span>
