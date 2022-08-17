@@ -28,9 +28,9 @@ export function Playlist(){
         <>
             <div className="main-container">
                 <Navbar />
-                <div className="history-page">
+                <div className="likes-page">
                     <div className="sidebar-container"><Sidebar /></div>
-                    <div className="cards-container ">
+                    <div className="cards-container flex-row-wrap">
                         { playlists && playlists.map(playlist=>{
                             return(
                                 <PlayListCard playlist={playlist} key={playlist._id}/>

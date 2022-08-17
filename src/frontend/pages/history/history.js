@@ -39,7 +39,7 @@ export function History(){
         <>
             <div className="main-container">
                 <Navbar />
-                <div className="history-page">
+                <div className="likes-page">
                     <div className="sidebar-container">  <Sidebar /></div>
                     <div className="cards-container flex-col-no-wrap">
                         { history.length>=2 && <button className="solid-btn" onClick={removeAllVideosFromHistory}>Clear All</button>}

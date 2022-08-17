@@ -10,7 +10,7 @@
     background-color:var(--primary-background-color);
     margin-top: 5rem;
     min-height: 100vh;
-    max-height: fit-content;
+    height: max-content;
 }
 
 .liked-videos-container{
