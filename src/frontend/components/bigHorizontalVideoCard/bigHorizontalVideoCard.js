@@ -134,7 +134,7 @@ const BigHorizontalCard =({video})=>{
 
                 { showModal && 
                     location.pathname==="/liked-videos" && 
-                        <div className="modal">
+                        <div className="modal" onMouseLeave={()=>setShowModal(false)}>
                             <div className="menu-item" onClick={removeFromLikedVideos}>
                                 <span className="material-icons md-28">
                                     delete
