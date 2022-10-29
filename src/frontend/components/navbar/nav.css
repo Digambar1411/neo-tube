@@ -98,22 +98,22 @@ input[type=search]:focus{
     padding-left: 2rem;
 }
 
-.md-36{ 
+.fs-36{ 
     font-size:36px; 
 }
 
-.md-28{
+.fs-28{
     font-size:28px;
+}
+
+.fs-24{
+    font-size: 24px;
 }
 
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.md-30{
-    font-size: 30px;
 }
 
 .control-btn{

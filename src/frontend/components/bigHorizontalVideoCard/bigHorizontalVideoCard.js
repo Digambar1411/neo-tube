@@ -136,14 +136,14 @@ const BigHorizontalCard =({video})=>{
                     location.pathname==="/liked-videos" && 
                         <div className="modal" onMouseLeave={()=>setShowModal(false)}>
                             <div className="menu-item" onClick={removeFromLikedVideos}>
-                                <span className="material-icons md-28">
+                                <span className="material-icons fs-28">
                                     delete
                                 </span>
                                 <div>Remove from Liked videos</div>
                             </div>
 
                             <div className="menu-item" onClick={togglePlaylistModal}>
-                                <span className="material-icons-outlined md-28">
+                                <span className="material-icons-outlined fs-28">
                                     playlist_add
                                 </span>
                                 <div>Add to Playlist</div>
@@ -155,13 +155,13 @@ const BigHorizontalCard =({video})=>{
                     location.pathname==="/watch-later" && 
                         <div className="modal">
                             <div className="menu-item" onClick={removeFromWatchLaterVideos}>
-                                <span className="material-icons md-28">
+                                <span className="material-icons fs-28">
                                     watch_later
                                 </span>
                                 <div>Remove from Watch Later</div>
                             </div>
                             <div className="menu-item" onClick={togglePlaylistModal}>
-                                <span className="material-icons-outlined md-28">
+                                <span className="material-icons-outlined fs-28">
                                     playlist_add
                                 </span>
                                 <div>Add to Playlist</div>
@@ -173,7 +173,7 @@ const BigHorizontalCard =({video})=>{
                     location.pathname==="/history" && 
                         <div className="modal">
                             <div className="menu-item" onClick={removeVideoFromHistory}>
-                                <span className="material-icons md-28">
+                                <span className="material-icons fs-28">
                                     history
                                 </span>
                                 <div>Remove from History</div>
@@ -181,14 +181,14 @@ const BigHorizontalCard =({video})=>{
 
                             { isInLikedVideos ? 
                                 <div className="menu-item" onClick={removeFromLikedVideos}>
-                                    <span className="material-icons md-28">
+                                    <span className="material-icons fs-28">
                                         thumb_up
                                     </span>
                                     <div>Remove from Liked Videos</div>
                                 </div> 
                                 : 
                                 <div className="menu-item" onClick={addToLikedVideos}>
-                                    <span className="material-icons-outlined md-28">
+                                    <span className="material-icons-outlined fs-28">
                                         thumb_up
                                     </span>
                                     <div>Add to Liked Videos</div>
@@ -196,7 +196,7 @@ const BigHorizontalCard =({video})=>{
                             }
 
                             <div className="menu-item" onClick={togglePlaylistModal}>
-                                <span className="material-icons-outlined md-28">
+                                <span className="material-icons-outlined fs-28">
                                     playlist_add
                                 </span>
                                 <div>Add to Playlist</div>
@@ -208,7 +208,7 @@ const BigHorizontalCard =({video})=>{
                     location.pathname===`/play-list/${playlistId}` && 
                         <div className="modal">
                             <div className="menu-item" onClick={deleteVideoFromPlaylist}>
-                                <span className="material-icons md-28">
+                                <span className="material-icons fs-28">
                                     playlist_play
                                 </span>
                                 <div>Remove from Playlist</div>
@@ -216,14 +216,14 @@ const BigHorizontalCard =({video})=>{
 
                             {isInWatchLater ? 
                                 <div className="menu-item" onClick={removeFromWatchLaterVideos}>
-                                    <span className="material-icons md-28">
+                                    <span className="material-icons fs-28">
                                         watch_later
                                     </span>
                                     <div>Remove from Watch Later</div>
                                 </div>: 
                                 
                                 <div className="menu-item" onClick={addToWatchLaterVideos}>
-                                    <span className="material-icons-outlined md-28">
+                                    <span className="material-icons-outlined fs-28">
                                         watch_later
                                     </span>
                                     <div>Add to Watch Later</div>
@@ -232,14 +232,14 @@ const BigHorizontalCard =({video})=>{
 
                             { isInLikedVideos ? 
                                 <div className="menu-item" onClick={removeFromLikedVideos}>
-                                    <span className="material-icons md-28">
+                                    <span className="material-icons fs-28">
                                         thumb_up
                                     </span>
                                     <div>Remove from Liked Videos</div>
                                 </div> 
                                 : 
                                 <div className="menu-item" onClick={addToLikedVideos}>
-                                    <span className="material-icons-outlined md-28">
+                                    <span className="material-icons-outlined fs-28">
                                         thumb_up
                                     </span>
                                     <div>Add to Liked Videos</div>

@@ -32,16 +32,16 @@ export function Navbar() {
                 <section className="flex-sp-btwn gap-1rem pd-right center">
                 { 
                     theme=="light" ?    
-                        <span className="material-icons md-36" onClick={toggleTheme}>
+                        <span className="material-icons fs-36" onClick={toggleTheme}>
                             dark_mode
                         </span> :
-                        <span className="material-icons-outlined md-30" onClick={toggleTheme}>
+                        <span className="material-icons-outlined fs-30" onClick={toggleTheme}>
                             light_mode
                         </span> 
                 }
 
                    { isLoggedIn ? 
-                    <span className="material-icons-outlined md-36 profile" onClick={()=>navigate("/user-profile")}>
+                    <span className="material-icons-outlined fs-36 profile" onClick={()=>navigate("/user-profile")}>
                         person
                     </span> :  
                     <>
