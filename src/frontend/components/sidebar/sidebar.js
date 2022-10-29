@@ -19,10 +19,10 @@ export function Sidebar() {
             </NavLink>
 
             <NavLink to="/liked-videos" className={sidebarMenuClass}>
-                <span className="material-icons-outlined fs-24">
+                <span className="material-icons-outlined fs-24 ">
                     thumb_up
                 </span>
-                <div className="menu-text"> Liked Videos</div>
+                <div className="menu-text pl-4"> Liked Videos</div>
             </NavLink>
 
             <NavLink to="/watch-later" className={sidebarMenuClass}>

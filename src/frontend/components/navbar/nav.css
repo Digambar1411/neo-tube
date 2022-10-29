@@ -126,3 +126,7 @@ input[type=search]:focus{
     padding: 4px 6px;
     text-decoration: none;
 }
+
+.ml-10{
+    margin-left: 10px;
+}

@@ -11,13 +11,13 @@ export function Navbar() {
     return(
     <>
         <nav className="nav flex-sp-btwn ">
-            <section className="flex-sp-btwn gap-1rem pd-left center">
+            <section className="pd-left center">
                 <div className="menu center">
                     <span className="material-icons-outlined menu-icon" onClick={showSidebar}>
                         menu
                     </span>
                 </div>
-                <div className="brand" onClick={()=>navigate("/")}>NeoTube</div>
+                <div className="brand ml-10" onClick={()=>navigate("/")}>NeoTube</div>
             </section>
 
             <section className="search-section">
