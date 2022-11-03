@@ -169,8 +169,18 @@
     uploadedAt:new Date("Feb 03, 2021"),
     description:"Here it is, the much-awaited guide on how to find the best health insurance policy for yourself and your family",   
   },
-
- 
+  
+  {
+    _id: "WafKlTKUFyw",
+    title: "Masterclass: Myanmar में Narendra Modi की मुश्किल का China ने क्या फायदा उठा लिया? Duniyadari E628",
+    categoryName:"News",
+    channelProfile:"ytc/AMLnZu95miw-xxKObNVp2GD5DlZrteukt1_12cDtOOVqHBQ=s68-c-k-c0x00ffffff-no-rj",
+    views:"89K",
+    creator:"The Lallantop",
+    thumbnail:  "https://i.ytimg.com/vi/WafKlTKUFyw/hqdefault.jpg",
+    uploadedAt:new Date("Jul 30, 2022"),
+    description:"In this episode, Saurabh Dwivedi discusses the Military Junta of Myanmar and its impact on India. Myanmar army did a military coup in the early hours of February 1st, 2021. The army arrested elected leaders like Aung Sang Suu Kyi and others and then announced a nationwide emergency. Despite the restrictions and violence, People continued to protest and kept criticising the Army. Thousands have been locked in jail and many killed in the broad daylight. Recently, Four democracy activists were hanged for their anti-military demonstrations. One of them was a former parliamentarian. He was a close ally of Suu Kyi. Capital punishment is legal yet rare in Myanmar. The previous capital punishment did happen some three decades before.",   
+  },
 
    {
     _id: "GKyCVpBh_Zw",

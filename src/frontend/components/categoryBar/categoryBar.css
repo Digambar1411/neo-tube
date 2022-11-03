@@ -4,8 +4,8 @@
     flex-direction: row;
     position:fixed;
     z-index:4;
-    border-top: 1px solid var(--light-border-color);
-    border-bottom: 1px solid var(--light-border-color);
+    /* border-top: 1px solid var(--light-border-color);
+    border-bottom: 1px solid var(--light-border-color); */
     background-color: var(--secondary-background-color);
     gap:0.75rem;
     align-items: center;
@@ -18,8 +18,7 @@
     font-size: 1em;
     width: max-content;
     padding: 8px 12px;
-    border-radius:25px;
-    border: 1px solid var(--light-border-color);
+    border-radius:12px;
     color:var(--font-color);
     background-color: var(--background-accent);
     cursor: pointer;
@@ -35,4 +34,9 @@
     cursor: pointer;
     position: absolute;
     opacity:0
+}
+
+.category-btn:hover{
+    background-color: var(--background-accent-two);
+    /* transition-delay: .1s; */
 }

@@ -75,14 +75,14 @@ const SmallVideoCard =({video})=>{
                     <div className="video-details">
                         <div className="title">{title}</div>
                         <section className="sub-details">
-                            <div className="owner-name">{creator}</div>
+                            <div className="owner-name gray-500">{creator}</div>
                             <section className="other-details">
-                                <div className="views">{views} views</div>
+                                <div className="views gray-500">{views} views</div>
                                 <div className="validity">
-                                    <span className="material-icons separator">
+                                    <span className="material-icons separator gray-500">
                                         fiber_manual_record
                                     </span>
-                                    <Moment fromNow>{uploadedAt}</Moment>
+                                    <Moment fromNow className="gray-500">{uploadedAt}</Moment>
                                 </div>
                             </section>
                         </section>

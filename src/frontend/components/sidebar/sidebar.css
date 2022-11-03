@@ -3,37 +3,35 @@
 }
 
 .side-bar{
-    width:250px;
+    width:248px;
     height:100vh;
     display:flex;
     position: fixed;
-    top:60px;
+    top:48px;
     flex-direction: column;
     margin-top: 1rem;
-    padding-right:0.5rem;
+    padding:0rem 0.5rem;
     left:-100%;
     background-color: var(--secondary-background-color);
 }
 
 .side-bar-menu{
+    width: 80%;
     display:flex;
     flex-direction: row;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.75rem 1rem;
     color: var(--font-color);
     text-decoration: none;
+    border-radius:14px;
 }
 
 .menu-text{
     margin-left: 1.5rem;
 }
 
-.side-bar-menu:hover{
+.side-bar-menu.active-link,.side-bar-menu:hover{
     background-color: var(--background-accent);
-}
-
-.side-bar-menu.active-link{
-    background-color: var(--background-accent-two);
 }
 
 .mg-top{

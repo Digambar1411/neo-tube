@@ -39,19 +39,23 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
-    -webkit-box-orient: vertical;
-    font-weight: bold;
 }
 
 .sub-details{
+    display:flex;
+    flex-direction: column;
     font-size: 13px;
-    color: var(--light-font-color);
+    font-weight: 400;
+    gap:4px;
+}
+
+.gray-500{
+    color:var(--light-font-color)
 }
 
 .owner-name{
     display: flex;
     align-items: center;
-    gap: 4px;
 }
 
 .other-details{
