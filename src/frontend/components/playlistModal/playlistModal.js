@@ -55,7 +55,7 @@ export const PlaylistModal =({video})=>{
             <div className='playlist-modal'>
                 <div className="save-to-playlist">
                     <p>Save to..</p>
-                    <span className="material-icons-outlined md-28" onClick={()=>setPlaylistModal(false)}>
+                    <span className="material-icons-outlined fs-28" onClick={()=>setPlaylistModal(false)}>
                             close
                     </span>          
                 </div>

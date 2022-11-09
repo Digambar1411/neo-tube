@@ -7,11 +7,13 @@ export function WatchLater(){
 
     return(
         <>
-            <div className="container">
+            <div className="main-container">
                 <Navbar />
                 <div className="likes-page">
-                    <Sidebar />
-                    <div className="liked-videos-container">
+                    <div className="sidebar-container"> 
+                        <Sidebar />
+                     </div>
+                    <div className="cards-container flex-col-no-wrap">
                     { watchLaterVideos.length ? watchLaterVideos.map(video=>{
                         return(
                         <BigHorizontalCard video={video} key={video._id}/>

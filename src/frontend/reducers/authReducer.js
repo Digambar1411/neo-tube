@@ -5,14 +5,16 @@ const AuthReducer =(stateAuth, action)=>{
                 ...stateAuth,
                 isLoggedIn:true,
                 user:JSON.parse(localStorage.getItem("auth_user") || []),
-                token:localStorage.getItem("auth_token")
+                token:localStorage.getItem("auth_token"),
+                defaultUser:localStorage.getItem("default_user")
             }
         case "SIGNUP":
             return{
                 ...stateAuth,  
                 isLoggedIn:true, 
                 user:JSON.parse(localStorage.getItem("auth_user") || []),
-                token:localStorage.getItem("auth_token")
+                token:localStorage.getItem("auth_token"),
+                defaultUser:localStorage.getItem("default_user")
             }
 
         case "LOGOUT":

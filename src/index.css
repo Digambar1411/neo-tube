@@ -21,16 +21,17 @@ code {
   --font-color:#030303;
   --light-font-color:#6d6b6b;
   --brand-color:#0cb949;
-  
+  --scrollbar-thumb:#707070;
 }
 
 [theme-class="dark"]{
   --primary-background-color:#131414;
   --secondary-background-color:#0e0d0d;
-  --background-accent:#1d1d1d;
-  --background-accent-two:#302f2f;
+  --background-accent:#272727;
+  --background-accent-two:#414040;
   --light-border-color:#444647;
   --font-color:#ffffff;
-  --light-font-color:#b4b3b3;
+  --light-font-color:#a4a4a4;
   --brand-color:#1DB954;
+  --scrollbar-thumb:#a0a1a1;
 }

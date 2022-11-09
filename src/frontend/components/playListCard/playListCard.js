@@ -27,7 +27,7 @@ const PlayListCard =({playlist})=>{
         <div className="playList-card" onClick={()=>navigate(`/play-list/${playlist._id}`)}>
             <div className='playList-card-image'></div>
             <div className='playList-card-title center'>{playlist.title}</div>
-            <span className="material-icons-outlined md-28 delete-icon" onClick={(deleteSelectedPlaylist)}>
+            <span className="material-icons-outlined fs-28 delete-icon" onClick={(deleteSelectedPlaylist)}>
                 delete
             </span>
         </div>

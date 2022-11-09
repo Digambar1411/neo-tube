@@ -29,13 +29,15 @@ export function Playlist(){
             <div className="main-container">
                 <Navbar />
                 <div className="likes-page">
-                    <div className="sidebar-container"><Sidebar /></div>
-                    <div className="cards-container flex-row-wrap">
-                        { playlists && playlists.map(playlist=>{
+                    <div className="sidebar-container"> 
+                        <Sidebar />
+                     </div>
+                    <div className="cards-container flex-col-no-wrap">
+                        { playlists.length ? playlists.map(playlist=>{
                             return(
                                 <PlayListCard playlist={playlist} key={playlist._id}/>
                             )
-                        })}
+                        }) : <p>You dont have any playlist</p>}
                     </div>
                 </div>              
             </div>

@@ -3,13 +3,13 @@
     position: relative;
 }
 
-.video-card:hover{
-    cursor: pointer;
-}
-
 .card-image{
     height:135px;
-    background-color: var(--brand-color);  
+}
+
+.thumbnail-img{
+    border-radius: 0.75rem;
+    background-color: var(--brand-color);
 }
 
 .video-info-container{
@@ -26,8 +26,7 @@
 .video-details{
     display: flex;
     flex-direction: column;
-    align-content: space-between;
-    gap:10px;
+    gap:8px;
 }
 
 .title{
@@ -39,19 +38,23 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
-    -webkit-box-orient: vertical;
-    font-weight: bold;
 }
 
 .sub-details{
+    display:flex;
+    flex-direction: column;
     font-size: 13px;
-    color: var(--light-font-color);
+    font-weight: 400;
+    gap:4px;
+}
+
+.gray-500{
+    color:var(--light-font-color)
 }
 
 .owner-name{
     display: flex;
     align-items: center;
-    gap: 4px;
 }
 
 .other-details{
@@ -126,4 +129,8 @@
 
 .md-24{
     font-size: 24px;
+}
+
+.title{
+    cursor: pointer;
 }

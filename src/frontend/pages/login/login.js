@@ -5,7 +5,6 @@ import { useAuth } from "../../contexts";
 import "./auth.css";
 import { LoginService } from "../../services";
 
-
 export function Login(){
     const navigate = useNavigate();
     const { dispatchAuth } = useAuth();
@@ -29,8 +28,7 @@ export function Login(){
              ));
             dispatchAuth({type:"LOGIN"})
             navigate("/");  
-        }           
-            
+        }              
     }
 
     return (
@@ -63,7 +61,6 @@ export function Login(){
                                 required
                             />
                         </div>
-
 
                         <div className="auth-btns">
                             <button className="auth-btn login">Login</button>
