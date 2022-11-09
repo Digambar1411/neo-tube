@@ -9,7 +9,7 @@ export function Navbar() {
 		stateAuth: { isLoggedIn, defaultUser, user:{firstName}},
 	} = useAuth();
 	const navigate = useNavigate();
-	const firstLater = firstName.slice(0,1)
+	const firstLater = firstName?.slice(0,1)
 
 	return (
 		<>
@@ -41,7 +41,7 @@ export function Navbar() {
 
 				<section className="flex-sp-btwn gap-1rem pd-right center">
 					{theme == "light" ? (
-						<span className="material-icons fs-32" onClick={toggleTheme}>
+						<span className="material-icons fs-36" onClick={toggleTheme}>
 							dark_mode
 						</span>
 					) : (
