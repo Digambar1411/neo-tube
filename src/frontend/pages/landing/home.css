@@ -13,22 +13,33 @@
 }
 
 .main-section{
-    position: relative;
-    top: 79px;
-    left: 253px;
+    position: absolute;
+    top: 64px;
+    right: 0px;
     display: flex ;
     flex-direction: column;
 }
 
 .main-cards-container{
-    top: 58px;
+    top: 56px;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 254px);
+    grid-template-columns: repeat(4, 251.225px);
     height: fit-content;
     gap: 1rem;
     padding: 1.25rem 1rem;
     flex-wrap: nowrap;
     padding-bottom: 1rem;
-    background-color:var(--primary-background-color);
+    background-color: var(--secondary-background-color);
+}
+
+::-webkit-scrollbar{
+    width:17px;
+    background-color: var(--secondary-background-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:var(--scrollbar-thumb);
+    -webkit-border-radius:8px;
+    border: 4px solid var(--secondary-background-color);
 }

@@ -3,13 +3,13 @@
     position: relative;
 }
 
-.video-card:hover{
-    cursor: pointer;
-}
-
 .card-image{
     height:135px;
-    background-color: var(--brand-color);  
+}
+
+.thumbnail-img{
+    border-radius: 0.75rem;
+    background-color: var(--brand-color);
 }
 
 .video-info-container{
@@ -26,8 +26,7 @@
 .video-details{
     display: flex;
     flex-direction: column;
-    align-content: space-between;
-    gap:10px;
+    gap:8px;
 }
 
 .title{
@@ -130,4 +129,8 @@
 
 .md-24{
     font-size: 24px;
+}
+
+.title{
+    cursor: pointer;
 }
