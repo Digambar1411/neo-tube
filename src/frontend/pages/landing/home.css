@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
 
 *{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .landing-page{
@@ -9,13 +10,13 @@
     flex-direction: row;
     height:auto;
     width: 100%;
-    margin-bottom: 8.55rem;
+    margin-bottom: 7.5rem;
 }
 
 .main-section{
-    position: absolute;
+    position: relative;
     top: 64px;
-    right: 0px;
+    left: 264px;
     display: flex ;
     flex-direction: column;
 }
