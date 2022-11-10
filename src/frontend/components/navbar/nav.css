@@ -164,3 +164,7 @@ input[type="search"]:focus {
 .profile,.menu,.brand,.search-icon,.control-btn{
 	cursor: pointer;
 }
+
+@media only screen (484px<=width>=284px){
+	
+}
