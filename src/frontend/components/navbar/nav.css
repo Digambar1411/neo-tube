@@ -16,7 +16,14 @@
 .brand {
 	font-size: 1.75rem;
 	font-weight: bold;
-	color: var(--brand-color);
+	color: var(--font-color);
+	letter-spacing: -1px;
+}
+.brand-logo{
+display: flex;
+/* justify-content: center; */
+align-items: center;
+
 }
 
 .menu {

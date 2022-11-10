@@ -1,15 +1,20 @@
 import "./nav.css";
 import { useSidebar, useTheme, useAuth } from "../../contexts/index";
 import { Link, useNavigate } from "react-router-dom";
+import brand from "../../assets/brand1.png";
 
 export function Navbar() {
 	const { showSidebar } = useSidebar();
 	const { toggleTheme, theme } = useTheme();
 	const {
-		stateAuth: { isLoggedIn, defaultUser, user:{firstName}},
+		stateAuth: {
+			isLoggedIn,
+			defaultUser,
+			user: { firstName },
+		},
 	} = useAuth();
 	const navigate = useNavigate();
-	const firstLater = firstName?.slice(0,1)
+	const firstLater = firstName?.slice(0, 1);
 
 	return (
 		<>
@@ -23,7 +28,8 @@ export function Navbar() {
 							menu
 						</span>
 					</div>
-					<div className="brand ml-10" onClick={() => navigate("/")}>
+					<div className="brand ml-10 center" onClick={() => navigate("/")}>
+						<img src={brand} />
 						NeoTube
 					</div>
 				</section>
@@ -72,13 +78,13 @@ export function Navbar() {
 					) : (
 						<>
 							<Link to="/login" className="control-btn">
-								Login
+								Sign In
 							</Link>
 							<button
 								className="control-btn"
 								onClick={() => navigate("/signup")}
 							>
-								sign up
+								Sign Up
 							</button>
 						</>
 					)}
