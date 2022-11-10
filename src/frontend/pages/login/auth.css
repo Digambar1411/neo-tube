@@ -8,7 +8,7 @@
 }
 
 .login-page{
-  background-color:var(--primary-background-color);
+  background-color: var(--secondary-background-color);
   width: 100%;
   overflow: auto;
   display: flex;
@@ -22,7 +22,7 @@
     margin: 2rem auto;
     width:70%;
     max-width:348px;
-    background-color: var( --secondary-background-color);
+    background-color:var(--primary-background-color);
     padding:2.5rem 2rem;
     border-radius: 4px;
     height: fit-content; 
