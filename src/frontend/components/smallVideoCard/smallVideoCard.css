@@ -155,7 +155,7 @@
 
 /* ------------------------media queries------------------------------ */
 
-@media screen and (max-width:1124px){
+@media screen and (max-width:1312px){
 .video-card{
     width: 100%;
     height:max-content;
