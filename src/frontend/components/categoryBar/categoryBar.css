@@ -39,34 +39,10 @@
     background-color: var(--background-accent-two);
 }
 
-@media screen and (max-width:480px){
-    .app{
+@media screen and (max-width:768px){
+    /* .app{
         background-color: var(--secondary-background-color);
-    }
-    .main-header{
-        width: 100%;
-        overflow-x:scroll;
-        scroll-behavior: smooth;
-        display: flex;
-        gap: 12px;
-    }
-
-    .main-header::-webkit-scrollbar{
-        display: none;
-    }
-
-    .category-btn{
-        display: flex;
-        flex-wrap: nowrap;
-    }
-    
-}
-
-@media screen and (min-width:481px) and (max-width:768px){
-    .app{
-        background-color: var(--secondary-background-color);
-    }
-    
+    } */
     .main-header{
         width: 100%;
         overflow-x:scroll;
