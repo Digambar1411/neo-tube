@@ -20,10 +20,8 @@
 	letter-spacing: -1px;
 }
 .brand-logo{
-display: flex;
-/* justify-content: center; */
-align-items: center;
-
+	display: flex;
+	align-items: center;
 }
 
 .menu {
@@ -95,6 +93,10 @@ input[type="search"]:focus {
 	padding-left: 1rem;
 }
 
+.pl-10{
+	padding-left: 10px;
+}
+
 .pd2-left {
 	padding-left: 2rem;
 }
@@ -117,6 +119,18 @@ input[type="search"]:focus {
 
 .fs-20 {
 	font-size: 20px;
+}
+
+.fs-30{
+	font-size: 30px;
+}
+
+.fs-34{
+	font-size: 34px;
+}
+
+.gap-10{
+	gap:10px;
 }
 
 .center {
@@ -160,11 +174,77 @@ input[type="search"]:focus {
 	align-items: center;
 }
 
-
 .profile,.menu,.brand,.search-icon,.control-btn{
 	cursor: pointer;
 }
 
-@media only screen (484px<=width>=284px){
+.default-navigation {
+	display:revert;
+}
+
+.mobile-navigation {
+	display:none;
+}
+
+.mobile-brand {
+	font-size: 1.65rem;
+	font-weight: bold;
+	color: var(--brand-color);
+	letter-spacing: -1px;
+}
+
+.mobile-menu {
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+	padding: 0.55rem;
+	border: none;
+}
+
+.mobile-rounded-avatar {
+	border-radius: 50%;
+	height: 2rem;
+	width: 2rem;
+}
+
+@media screen and (max-width:480px){
+	.brand-logo{
+		display: none;
+	}
+	.theme{
+		display:none
+	}
+	.auth-signup-btn{
+		display: none;
+	}
+}
+
+@media screen and (min-width:481) and (max-width:768px)  {
+	
 	
 }
+
+
+@media screen and (max-width:768px) {
+	.default-navigation {
+		display:none;
+	}
+
+	.mobile-navigation {
+		display: revert;
+	}
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+	.default-navigation {
+		display:revert;
+	}
+	
+	.search-section {
+		width: 40%;
+	}
+
+	.mobile-navigation {
+		display: none;
+	}
+}
+

@@ -20,7 +20,7 @@
 
 .login-card{
     margin: 2rem auto;
-    width:70%;
+    width:90%;
     max-width:348px;
     background-color:var(--primary-background-color);
     padding:2.5rem 2rem;
@@ -162,4 +162,11 @@ input[type=checkbox]{
 
 Link{
     text-decoration: none;
+}
+
+@media screen and (max-width:480px){
+    .login-card{
+        max-width:348px;
+        padding:2rem 1rem;
+    }
 }

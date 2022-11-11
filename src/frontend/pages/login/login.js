@@ -41,7 +41,7 @@ export function Login() {
 			<form className="flex-col-login" onSubmit={LoginHandler}>
 				<div className="input-div">
 					<label className="input-label" htmlFor="email">
-						EmaiL*
+						Email*
 					</label>
 					<input
 						className="input"

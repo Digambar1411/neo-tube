@@ -82,17 +82,22 @@ const SmallVideoCard = ({ video }) => {
 						<div className="title">{title}</div>
 						<section className="sub-details">
 							<div className="owner-name gray-500">{creator}</div>
-							<section className="other-details">
-								<div className="views gray-500">{views} views</div>
-								<div className="validity">
+							{/* <section className="other-details"> */}
+								<span className="gray-500 views">
 									<span className="material-icons separator gray-500">
+										fiber_manual_record
+									</span>
+									{views} views
+								</span>
+								<span className="validity">
+									<span className="material-icons separator gray-500 ">
 										fiber_manual_record
 									</span>
 									<Moment fromNow className="gray-500">
 										{uploadedAt}
 									</Moment>
-								</div>
-							</section>
+								</span>
+							{/* </section> */}
 						</section>
 					</div>
 
@@ -127,7 +132,7 @@ const SmallVideoCard = ({ video }) => {
 						</div>
 					)}
 
-					<span className="material-icons-outlined" onClick={toggleModal}>
+					<span className="material-icons-outlined more-icon" onClick={toggleModal}>
 						more_vert
 					</span>
 
