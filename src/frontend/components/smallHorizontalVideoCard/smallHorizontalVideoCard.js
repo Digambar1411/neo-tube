@@ -1,5 +1,6 @@
 import Moment from 'react-moment';
 import { useNavigate } from "react-router-dom";
+import "./smallHorizontalVideoCard.css"
 
 const SmallHorizontalVideoCard =({video})=>{
     const navigate = useNavigate();

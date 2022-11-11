@@ -50,17 +50,6 @@
     gap: 8px;
 }
 
-.sm-card-title{
-    font-size: 15px;
-    width: 100%;
-    height: 3.5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp:3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
 
 .sm-card-views{
     color: var(--light-font-color);
