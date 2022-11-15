@@ -1,5 +1,4 @@
 import { BigHorizontalCard } from "../../components/index";
-import "./likes.css";
 import { useLikedVideos } from "../../contexts";
 
 export function LikedVideos() {

@@ -4,13 +4,45 @@
     box-sizing: border-box;
     cursor: pointer;
     position: relative;
+    display: flex;
+    flex-direction: row;
 }
 
 .big-card-thumbnail{
-    width: 35%;
     height: 100%;
 }
 
 .big-card-video-details{
-    width: 60%;
+    width: 80%;
 }
+
+.ml-auto{
+    margin-left: auto;
+}
+
+@media screen and (max-width:480px){
+
+    .big-hz-video-card{
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width:400px){
+    .big-hz-video-card{
+        width: 85%;
+        height: max-content;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .big-card-video-details{
+        width: 80%;
+    }
+
+}
+    
