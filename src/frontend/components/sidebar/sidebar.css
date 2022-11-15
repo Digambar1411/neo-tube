@@ -44,6 +44,13 @@
 	padding-left: 4px;
 }
 
+
+@media screen and (max-width:1024px){
+	.side-bar{
+		display: none;
+	}
+}
+
 @media screen and (min-width: 1025px) and (max-width: 1312px) {
 	.side-bar {
 		width:55px;
@@ -59,11 +66,5 @@
 
 	.menu-text {
 		display: none;
-	}
-}
-
-@media screen and (min-width: 1313px) {
-	.side-bar {
-		width:232px;
 	}
 }

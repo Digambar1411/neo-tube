@@ -45,11 +45,8 @@
 }
 
 /* media queries for mobile */
-@media and screen (max-width:1024px){
-    .side-bar{
-        display: none;
-    }
-    
+@media screen and (max-width:1024px){
+       
     .landing-page{
         display: flex;
         flex-direction: column;
