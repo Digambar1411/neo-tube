@@ -34,3 +34,25 @@
     margin-bottom: 1.5rem;
     font-weight: bold;
 }
+
+@media screen and (max-width:480px){
+    .profile-card{
+        gap:0.5rem;
+        padding: 2rem 0.5rem;
+        max-width: 14rem;
+        width: 80%;
+        height: max-content;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:678px){
+    .profile-card{
+        gap:0.5rem;
+        padding: 2rem 1rem;
+        width: 90%;
+        max-width: 17rem;
+        height: max-content;
+        box-sizing: border-box;
+    }
+}
