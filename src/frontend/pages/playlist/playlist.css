@@ -1,5 +1,29 @@
-.flex-row-wrap{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+
+.playlist-container{
+    margin: 0 auto;
+    height: 100%;
+    width:90%;
+    display: grid;
+    gap: 2rem;    
+    grid-template-columns: repeat(3,1fr);
 }
+
+@media screen and (max-width:480px){
+    .playlist-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px){
+    .playlist-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1213px){
+    .playlist-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+

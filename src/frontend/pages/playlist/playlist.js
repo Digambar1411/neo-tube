@@ -32,14 +32,17 @@ export function Playlist() {
 	}, []);
 
 	return (
-		<>
+		
+		<div className="playlist-container">
 			{playlists.length ? (
 				playlists.map((playlist) => {
 					return <PlayListCard playlist={playlist} key={playlist._id} />;
 				})
 			) : (
-				<p>You dont have any playlist</p>
+				<p className="">You dont have any playlist</p>
 			)}
-		</>
+		</div>
+		
+		
 	);
 }
