@@ -8,25 +8,27 @@
 }
 
 .login-page{
-  background-color:var(--primary-background-color);
+  background-color: var(--secondary-background-color);
   width: 100%;
   overflow: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  height: auto;
+  margin-top: 4rem;
 }
 
 .login-card{
-    margin-top:3rem;
-    margin-bottom: 2rem;
-    width:70%;
-    max-width:300px;
-    background-color: var( --secondary-background-color);
-    padding:2rem 1rem;
+    margin: 2rem auto;
+    width:90%;
+    max-width:348px;
+    background-color:var(--primary-background-color);
+    padding:2.5rem 2rem;
     border-radius: 4px;
     height: fit-content; 
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 20%);
     font-size:1rem;
+	box-sizing: border-box;
 }
 
 .auth-heading{
@@ -160,4 +162,11 @@ input[type=checkbox]{
 
 Link{
     text-decoration: none;
+}
+
+@media screen and (max-width:480px){
+    .login-card{
+        max-width:348px;
+        padding:2rem 1rem;
+    }
 }

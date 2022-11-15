@@ -1,13 +1,14 @@
 .play-card{
-    width:68%;
+    width:95%;
     height: max-content;
 }
 
 .ReactPlayer{
-    height: 360px;
+    height: 100%;
     width: 100% !important;
     margin: 0px;
 }
+
 
 .video-title{
     font-size: 1.25rem;
@@ -20,9 +21,6 @@
     color: var(--light-font-color);
 }
 
-.video-details{
-    gap: 1rem;
-}
 
 .dynamic-section{
     gap: 1rem;

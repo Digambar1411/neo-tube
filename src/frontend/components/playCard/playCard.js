@@ -88,7 +88,8 @@ const PlayCard=({video})=>{
     return(
         <>
             <div className="play-card">
-                <ReactPlayer 
+                <ReactPlayer
+                    style={{height:"200px"}}
                     className="ReactPlayer"
                     url={`https://www.youtube.com/watch?v=${video._id}`}
                     controls={true}

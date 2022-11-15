@@ -120,17 +120,19 @@ const BigHorizontalCard =({video})=>{
     }
   
     return(
-        <div className='big-hz-video-card flex-row' >
+        <div className='big-hz-video-card' >
                 <img className='big-card-thumbnail' src={`https://img.youtube.com/vi/${video._id}/maxresdefault.jpg`}
                     onClick={()=>navigate(`/video-listing/${video._id}`)}/>
-                <div className='big-card-video-details flex-col mg-left-8px'>
-                    <div className="sm-card-title">{video.title}</div>
-                    <div className='sm-card-creator light-font'>{video.creator}</div>
+                <div className="flex-row flex-space-btwn">
+                    <div className='big-card-video-details flex-col mg-left-8px'>
+                        <div className="sm-card-title">{video.title}</div>
+                        <div className='sm-card-creator light-font'>{video.creator}</div>
+                    </div>
+                    
+                    <span className="material-icons-outlined ml-auto" onClick={toggleModal}>
+                        more_vert
+                    </span>
                 </div>
-                
-                <span className="material-icons-outlined" onClick={toggleModal}>
-                    more_vert
-                </span>
 
                 { showModal && 
                     location.pathname==="/liked-videos" && 
