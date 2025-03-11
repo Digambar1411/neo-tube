@@ -27,3 +27,7 @@
 	font-weight: bold;
 	color: var(--brand-color);
 }
+
+a:hover{
+  cursor: pointer;
+}
