@@ -1,5 +1,4 @@
 import "./footer.css";
-import { Link } from "react-router-dom";
 import github from "../../assets/github.png";
 import twitter from "../../assets/twitter.png";
 import linkedin from "../../assets/linkedin.png";
@@ -10,17 +9,20 @@ export function Footer() {
 			<div className="video-lib-footer">
 				<p className="footer-heading">Digambar Deshawal</p>
 				<section className="social-handles">
-					<Link to="https://github.com/Digambar1411">
-                        <img src={github} alt="github" />
-					</Link>
+					<a href="https://github.com/Digambar1411" target="_blank">
+						<img src={github} alt="github" />
+					</a>
 
-					<Link to="https://www.linkedin.com/in/digambar-deshawal-9b279b147/">						
-                        <img src={linkedin} alt="linkedin" />
-					</Link>
+					<a
+						href="https://www.linkedin.com/in/digambar-deshawal-9b279b147/"
+						target="_blank"
+					>
+						<img src={linkedin} alt="linkedin" />
+					</a>
 
-					<Link to="https://twitter.com/deshawald14">
-                        <img src={twitter} alt="twitter" />
-					</Link>
+					<a href="https://twitter.com/deshawald14" target="_blank">
+						<img src={twitter} alt="twitter" />
+					</a>
 				</section>
 			</div>
 		</>
