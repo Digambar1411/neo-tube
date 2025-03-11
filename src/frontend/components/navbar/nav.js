@@ -35,7 +35,7 @@ export function Navbar() {
 						</div>
 					</section>
 
-					<section className="search-section">
+					{/* <section className="search-section">
 						<div className="search">
 							<input
 								className="search-input pd-right"
@@ -46,7 +46,7 @@ export function Navbar() {
 								search
 							</span>
 						</div>
-					</section>
+					</section> */}
 
 					<section className="flex-sp-btwn gap-1rem pd-right center">
 						{theme == "light" ? (
